@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom ="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <company.tap.thememanager.ui.TapTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Merchant Name"
+            custom:fontSize="@{textViewTheme.text.fontSize}"
+            custom:color="@{textViewTheme.color}"/>
+
+    </LinearLayout>
+
+    <data>
+        <variable
+            name="textViewTheme"
+            type="company.tap.thememanager.atoms.TextViewTheme" />
+    </data>
+</layout>
