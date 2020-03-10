@@ -20,7 +20,7 @@ import company.tap.thememanager.atoms.AtomsTheme;
 import company.tap.thememanager.atoms.TextViewTheme;
 import company.tap.thememanager.util.JsonKeys;
 
-class ThemeManager {
+public class ThemeManager {
 
     private BaseTheme baseTheme;
     private AtomsTheme atomsTheme;
@@ -33,7 +33,7 @@ class ThemeManager {
         return atomsTheme;
     }
 
-    void loadTapTheme(Resources resources, int resId) {
+    public void loadTapTheme(Resources resources, int resId) {
         InputStream resourceReader = resources.openRawResource(resId);
         Writer writer = new StringWriter();
 

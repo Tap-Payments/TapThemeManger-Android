@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context="company.tap.sample.MainActivity">
 
         <include layout="@layout/navigation_header_layout"
             android:layout_width="match_parent"

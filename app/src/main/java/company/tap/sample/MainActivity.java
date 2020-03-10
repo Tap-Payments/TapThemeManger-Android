@@ -1,4 +1,4 @@
-package company.tap.thememanager;
+package company.tap.sample;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import company.tap.thememanager.R;
+import company.tap.thememanager.ThemeManager;
 import company.tap.thememanager.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
