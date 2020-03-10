@@ -10,7 +10,6 @@ import company.tap.sample.databinding.ActivityMainBinding;
 import company.tap.thememanager.ThemeManager;
 
 public class MainActivity extends AppCompatActivity {
-
     int currentTheme;
     ThemeManager themeManager;
     ActivityMainBinding mainBinding;
