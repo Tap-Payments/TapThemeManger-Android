@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "company.tap.thememanager"
+        applicationId "company.tap.sample"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

@@ -6,9 +6,8 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import company.tap.thememanager.R;
+import company.tap.sample.databinding.ActivityMainBinding;
 import company.tap.thememanager.ThemeManager;
-import company.tap.thememanager.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

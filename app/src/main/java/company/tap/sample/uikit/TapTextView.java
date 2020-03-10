@@ -6,7 +6,8 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-import company.tap.thememanager.R;
+import company.tap.sample.R;
+
 
 public class TapTextView extends AppCompatTextView {
 
