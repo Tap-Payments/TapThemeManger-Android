@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ThemeManager</string>
+    <string name="swap">Swap</string>
 </resources>

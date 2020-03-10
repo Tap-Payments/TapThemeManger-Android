@@ -4,10 +4,20 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
         <include layout="@layout/navigation_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             app:textViewTheme="@{textViewTheme}"/>
+
+        <Button
+            android:onClick="swap"
+            android:text="@string/swap"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

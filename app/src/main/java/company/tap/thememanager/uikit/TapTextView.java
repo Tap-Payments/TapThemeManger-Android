@@ -1,4 +1,4 @@
-package company.tap.thememanager.ui;
+package company.tap.thememanager.uikit;
 
 import android.content.Context;
 import android.content.res.TypedArray;
