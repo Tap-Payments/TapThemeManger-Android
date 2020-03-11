@@ -21,18 +21,27 @@ import company.tap.thememanager.atoms.TextViewTheme;
 import company.tap.thememanager.util.JsonKeys;
 
 public class ThemeManager {
-
+    /**
+     * Base style for the theme to be used in {@link AtomsTheme}
+     */
     private BaseTheme baseTheme;
+
+    /**
+     * Holder for all theme objects models
+     */
     private AtomsTheme atomsTheme;
 
-    public BaseTheme getBaseTheme() {
-        return baseTheme;
-    }
-
+    /**
+     * @return Gateway to provide with theme objects models
+     */
     public AtomsTheme getAtomsTheme() {
         return atomsTheme;
     }
 
+    /**
+     * @param resources android app resources to
+     * @param resId theme json file id
+     */
     public void loadTapTheme(Resources resources, int resId) {
         InputStream resourceReader = resources.openRawResource(resId);
         Writer writer = new StringWriter();
@@ -56,6 +65,9 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param jsonTheme initiating the theme through json string
+     */
     private void initTapTheme(String jsonTheme){
         baseTheme = new BaseTheme();
         atomsTheme = new AtomsTheme();
@@ -68,6 +80,9 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param atoms json atoms node
+     */
     private void configureAtomsStyle(JSONObject atoms) {
         try {
             configureTextView(atoms.getJSONObject(JsonKeys.TEXT_VIEW));
@@ -76,6 +91,9 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param textView json textview node
+     */
     private void configureTextView(JSONObject textView) {
         atomsTheme.setTextViewTheme(new TextViewTheme());
         try {
@@ -87,6 +105,10 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param text text type
+     * @return {@link TextLevels} instance
+     */
     private Text getTextType(String text){
         switch (text){
             case JsonKeys.HELPER_TEXT:
@@ -98,6 +120,10 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param color color type
+     * @return {@link Colors} instance
+     */
     private int getColorType(String color){
         switch (color){
             case JsonKeys.PRIMARY:
@@ -109,6 +135,9 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param base json base node
+     */
     private void configureBaseStyle(JSONObject base) {
         try {
             configureThemeColors(base.getJSONObject(JsonKeys.COLORS));
@@ -118,6 +147,9 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param colors json colors node
+     */
     private void configureThemeColors(JSONObject colors){
         baseTheme.setColors(new Colors());
         try {
@@ -128,6 +160,9 @@ public class ThemeManager {
         }
     }
 
+    /**
+     * @param text json text node
+     */
     private void configureThemeText(JSONObject text){
         baseTheme.setTextLevels(new TextLevels());
         try {
