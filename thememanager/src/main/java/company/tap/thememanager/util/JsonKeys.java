@@ -12,4 +12,5 @@ public class JsonKeys {
     public static final String TEXT_VIEW = "textView";
     public static final String COLOR = "color";
     public static final String TEXT_LEVEL = "textLevel";
+    public static final String EDIT_TEXTVIEW = "editTextview";
 }

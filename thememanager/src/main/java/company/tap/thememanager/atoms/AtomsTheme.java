@@ -5,6 +5,7 @@ public class AtomsTheme {
      * Theming object for the TextView
      */
     private TextViewTheme textViewTheme;
+    private EditTextTheme editTextTheme;
 
     /**
      * @return getter for the theming instance
@@ -18,5 +19,11 @@ public class AtomsTheme {
      */
     public void setTextViewTheme(TextViewTheme textViewTheme) {
         this.textViewTheme = textViewTheme;
+    }
+
+    public EditTextTheme getEditTextTheme() { return editTextTheme; }
+
+    public void setEditTextTheme(EditTextTheme editTextTheme) {
+        this.editTextTheme = editTextTheme;
     }
 }

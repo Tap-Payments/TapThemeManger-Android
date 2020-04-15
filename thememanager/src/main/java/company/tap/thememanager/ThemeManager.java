@@ -12,6 +12,7 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 
+import company.tap.thememanager.atoms.EditTextTheme;
 import company.tap.thememanager.base.BaseTheme;
 import company.tap.thememanager.base.Colors;
 import company.tap.thememanager.base.Text;
@@ -86,6 +87,22 @@ public class ThemeManager {
     private void configureAtomsStyle(JSONObject atoms) {
         try {
             configureTextView(atoms.getJSONObject(JsonKeys.TEXT_VIEW));
+            configureEditText(atoms.getJSONObject(JsonKeys.EDIT_TEXTVIEW));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void configureEditText(JSONObject editTextview) {
+        atomsTheme.setEditTextTheme(new EditTextTheme());
+        try {
+            atomsTheme.getEditTextTheme().setColor(getColorType(editTextview.getString(JsonKeys.COLOR)));
+            atomsTheme.getEditTextTheme().setText(getTextType(editTextview.getString(JsonKeys.TEXT_LEVEL)));
+            atomsTheme.getEditTextTheme().setTextColorHint(getColorType(editTextview.getString(JsonKeys.COLOR)));
+            atomsTheme.getEditTextTheme().setBackgroundTint(getColorType(editTextview.getString(JsonKeys.COLOR)));
+            //Todo add maxlines
+            atomsTheme.getEditTextTheme().setMaxLines(getColorType(editTextview.getString(JsonKeys.COLOR)));
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
