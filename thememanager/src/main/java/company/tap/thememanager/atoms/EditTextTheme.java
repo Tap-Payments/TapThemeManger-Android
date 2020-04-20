@@ -8,28 +8,11 @@ import company.tap.thememanager.base.Text;
  * Copyright (c) 2020    Tap Payments.
  * All rights reserved.
  **/
-public class EditTextTheme {
-    private Text text;
-    private int color;
-    private int textColorHint;
-    private int maxLines;
-    private int backgroundTint;
+public class EditTextTheme extends BaseTextTheme{
 
-    public Text getText() {
-        return text;
-    }
-
-    public int getColor() {
-        return color;
-    }
-
-    public void setText(Text text) {
-        this.text = text;
-    }
-
-    public void setColor(int color) {
-        this.color = color;
-    }
+    private Integer maxLines;
+    private Integer textColorHint;
+    private Integer backgroundTint;
 
     public int getTextColorHint() {
         return textColorHint;

@@ -25,6 +25,7 @@ public class ThemeManager {
     /**
      * Base style for the theme to be used in {@link AtomsTheme}
      */
+
     private BaseTheme baseTheme;
 
     /**
@@ -75,52 +76,15 @@ public class ThemeManager {
         try {
             JSONObject tapTheme = new JSONObject(jsonTheme);
             configureBaseStyle(tapTheme.getJSONObject(JsonKeys.BASE));
-            configureAtomsStyle(tapTheme.getJSONObject(JsonKeys.ATOMS));
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 
-    /**
-     * @param atoms json atoms node
-     */
-    private void configureAtomsStyle(JSONObject atoms) {
-        try {
-            configureTextView(atoms.getJSONObject(JsonKeys.TEXT_VIEW));
-            configureEditText(atoms.getJSONObject(JsonKeys.EDIT_TEXTVIEW));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
 
-    private void configureEditText(JSONObject editTextview) {
-        atomsTheme.setEditTextTheme(new EditTextTheme());
-        try {
-            atomsTheme.getEditTextTheme().setColor(getColorType(editTextview.getString(JsonKeys.COLOR)));
-            atomsTheme.getEditTextTheme().setText(getTextType(editTextview.getString(JsonKeys.TEXT_LEVEL)));
-            atomsTheme.getEditTextTheme().setTextColorHint(getColorType(editTextview.getString(JsonKeys.COLOR)));
-            atomsTheme.getEditTextTheme().setBackgroundTint(getColorType(editTextview.getString(JsonKeys.COLOR)));
-            //Todo add maxlines
-            atomsTheme.getEditTextTheme().setMaxLines(getColorType(editTextview.getString(JsonKeys.COLOR)));
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
 
-    /**
-     * @param textView json textview node
-     */
-    private void configureTextView(JSONObject textView) {
-        atomsTheme.setTextViewTheme(new TextViewTheme());
-        try {
-            atomsTheme.getTextViewTheme().setColor(getColorType(textView.getString(JsonKeys.COLOR)));
-            atomsTheme.getTextViewTheme().setText(getTextType(textView.getString(JsonKeys.TEXT_LEVEL)));
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * @param text text type
