@@ -6,13 +6,12 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import company.tap.sample.databinding.ActivityMainBinding
-import company.tap.thememanager.TapThemeManager
+import company.tap.thememanager.ThemeManager
 import company.tap.thememanager.theme.TextViewTheme
 
 class MainActivity : AppCompatActivity() {
 
     private var currentTheme = 0
-    private val themeManager = TapThemeManager()
     private lateinit var mainBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun initAppTheme(theme: Int) {
         currentTheme = theme
-        themeManager.loadTapTheme(resources, theme)
+        ThemeManager.loadTapTheme(resources, theme)
         val textViewTheme = TextViewTheme()
-        textViewTheme.textSize = themeManager.getValue<Int>("textView.fontSize").toFloat()
-        textViewTheme.textColor = Color.parseColor(themeManager.getValue("textView.fontColor"))
+        textViewTheme.textSize = ThemeManager.getValue<Int>("textView.fontSize").toFloat()
+        textViewTheme.textColor = Color.parseColor(ThemeManager.getValue("textView.fontColor"))
         mainBinding.textViewTheme = textViewTheme
     }
 

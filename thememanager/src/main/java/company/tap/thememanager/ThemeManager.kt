@@ -1,7 +1,6 @@
 package company.tap.thememanager
 
 import android.content.res.Resources
-import android.graphics.Color
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -15,7 +14,7 @@ import java.nio.charset.StandardCharsets
  *
  */
 @Suppress("UNCHECKED_CAST")
-class TapThemeManager {
+object ThemeManager {
 
     private lateinit var theme: JSONObject
 
