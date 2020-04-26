@@ -1,9 +1,7 @@
-package company.tap.thememanager.atoms;
+package company.tap.thememanager.theme
 
 /**
  * Created by Mario Gamal on 4/20/20
  * Copyright © 2020 Tap Payments. All rights reserved.
  */
-public class ButtonTheme extends BaseTextTheme {
-
-}
+open class TextViewTheme : BaseTextTheme()

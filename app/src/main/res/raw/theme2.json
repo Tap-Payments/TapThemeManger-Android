@@ -1,22 +1,6 @@
 {
-  "base": {
-    "colors": {
-      "primary": "#008577",
-      "secondary":"#D81B60"
-    },
-    "text": {
-        "helperText": {
-          "fontSize": "20"
-        },
-        "headerText": {
-          "fontSize": "40"
-        }
-    }
-  },
-  "atoms": {
-    "textView": {
-      "color": "secondary",
-      "textLevel": "helperText"
-    }
+  "textView": {
+    "fontSize": 25,
+    "fontColor": "D81B60"
   }
 }

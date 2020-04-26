@@ -6,18 +6,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <company.tap.tapuilibrary.TapTextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:gravity="center"/>
+            android:gravity="center"
+            custom:theme="@{textViewTheme}"/>
 
     </LinearLayout>
 
     <data>
         <variable
             name="textViewTheme"
-            type="company.tap.thememanager.atoms.TextViewTheme" />
+            type="company.tap.thememanager.theme.TextViewTheme" />
     </data>
 </layout>
