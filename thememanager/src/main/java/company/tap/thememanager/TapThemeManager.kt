@@ -1,6 +1,7 @@
 package company.tap.thememanager
 
 import android.content.res.Resources
+import android.graphics.Color
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
