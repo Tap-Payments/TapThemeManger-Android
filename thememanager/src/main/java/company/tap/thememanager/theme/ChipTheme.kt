@@ -6,11 +6,13 @@ package company.tap.thememanager.theme
 Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
-open class ChipTheme : BaseTextTheme(){
+open class ChipTheme : BaseTextTheme() {
     var cardCornerRadius: Int? = null
     var cardPreventCornerOverlap: Boolean = false
     var outlineSpotShadowColor: Int? = null
-    var ContentPadding :Int?=null
-    var maxCardElevation:Int?=null
-    var cardElevation:Int?=null
+    var contentPadding: Int? = null
+    var maxCardElevation: Int? = null
+    var cardElevation: Int? = null
+    var strokeColor: Int? = null
+    var strokeWidth: Int? = null
 }
