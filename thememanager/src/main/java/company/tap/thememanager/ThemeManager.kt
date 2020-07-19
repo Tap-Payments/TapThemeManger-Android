@@ -1,6 +1,8 @@
 package company.tap.thememanager
 
+import android.content.Context
 import android.content.res.Resources
+import com.koushikdutta.ion.Ion
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -28,6 +30,15 @@ object ThemeManager {
             line = reader.readLine()
         }
         theme = JSONObject(writer.toString())
+    }
+
+    fun loadTheme(context: Context, url: String) {
+        Ion.with(context)
+                .load(url)
+                .asJsonObject()
+                .setCallback { e, result ->
+                    theme = JSONObject(result.toString())
+                }
     }
 
     fun <T> getValue(path: String): T {
