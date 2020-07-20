@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initAppTheme(theme: Int) {
         currentTheme = theme
+        ThemeManager.loadTapTheme(this, "https://kar-tempo.s3.ap-south-1.amazonaws.com/theme-tap.json")
         ThemeManager.loadTapTheme(resources, theme)
         val textViewTheme = TextViewTheme()
         textViewTheme.textSize = ThemeManager.getValue<Int>("textView.fontSize").toFloat()

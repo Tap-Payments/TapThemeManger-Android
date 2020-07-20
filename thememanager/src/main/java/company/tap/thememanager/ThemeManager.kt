@@ -2,6 +2,7 @@ package company.tap.thememanager
 
 import android.content.Context
 import android.content.res.Resources
+import android.widget.Toast
 import com.koushikdutta.ion.Ion
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -32,12 +33,17 @@ object ThemeManager {
         theme = JSONObject(writer.toString())
     }
 
-    fun loadTheme(context: Context, url: String) {
+    fun loadTapTheme(context: Context, url: String) {
         Ion.with(context)
                 .load(url)
                 .asJsonObject()
                 .setCallback { e, result ->
-                    theme = JSONObject(result.toString())
+                    if (e != null) {
+                        Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
+                    } else {
+                        theme = JSONObject(result.toString())
+                        Toast.makeText(context, result.toString(), Toast.LENGTH_SHORT).show()
+                    }
                 }
     }
 
