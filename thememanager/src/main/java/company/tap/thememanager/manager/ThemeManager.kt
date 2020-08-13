@@ -1,9 +1,11 @@
-package company.tap.thememanager
+package company.tap.thememanager.manager
 
 import android.content.Context
 import android.content.res.Resources
 import android.widget.Toast
 import com.koushikdutta.ion.Ion
+import company.tap.thememanager.utils.PrefKeys
+import company.tap.thememanager.utils.PrefKeys.baseTheme
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -20,6 +22,9 @@ import java.nio.charset.StandardCharsets
 object ThemeManager {
 
     private lateinit var theme: JSONObject
+
+
+    //// decide if we load json from path or assets
 
     fun loadTapTheme(resources: Resources, resId: Int) {
         val resourceReader = resources.openRawResource(resId)
@@ -56,6 +61,13 @@ object ThemeManager {
             }
         }
         val valueKey = pathComponent[pathComponent.lastIndex]
+        baseTheme = view.get(valueKey) as String
         return view.get(valueKey) as T
     }
+
+
+
+
+
+
 }
