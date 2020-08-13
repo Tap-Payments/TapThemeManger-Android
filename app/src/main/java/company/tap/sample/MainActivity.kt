@@ -6,7 +6,8 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import company.tap.sample.databinding.ActivityMainBinding
-import company.tap.thememanager.ThemeManager
+import company.tap.thememanager.manager.ThemeManager
+import company.tap.thememanager.theme.ChipTheme
 import company.tap.thememanager.theme.TextViewTheme
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        initAppTheme(R.raw.theme1)
+        initAppTheme(R.raw.default_light_theme)
     }
 
     private fun initAppTheme(theme: Int) {
@@ -30,10 +31,17 @@ class MainActivity : AppCompatActivity() {
         mainBinding.textViewTheme = textViewTheme
     }
 
+
+    fun getGlobalValues(){
+        val chipTheme = ChipTheme()
+//        chipTheme.cardCornerRadius =
+
+    }
+
     fun swap(view: View?) {
-        if (currentTheme == R.raw.theme1)
-            initAppTheme(R.raw.theme2)
+        if (currentTheme == R.raw.default_light_theme)
+            initAppTheme(R.raw.default_dark_theme)
         else
-            initAppTheme(R.raw.theme1)
+            initAppTheme(R.raw.default_light_theme)
     }
 }

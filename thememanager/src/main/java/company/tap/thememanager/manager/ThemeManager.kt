@@ -1,4 +1,4 @@
-package company.tap.thememanager
+package company.tap.thememanager.manager
 
 import android.content.Context
 import android.content.res.Resources
@@ -20,6 +20,9 @@ import java.nio.charset.StandardCharsets
 object ThemeManager {
 
     private lateinit var theme: JSONObject
+
+
+    //// decide if we load json from path or assets
 
     fun loadTapTheme(resources: Resources, resId: Int) {
         val resourceReader = resources.openRawResource(resId)
@@ -58,4 +61,10 @@ object ThemeManager {
         val valueKey = pathComponent[pathComponent.lastIndex]
         return view.get(valueKey) as T
     }
+
+
+
+
+
+
 }
