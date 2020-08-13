@@ -10,5 +10,5 @@ All rights reserved.
 
 data class RightAccessory (
 
-	val width : Int
+	var width : Int
 )

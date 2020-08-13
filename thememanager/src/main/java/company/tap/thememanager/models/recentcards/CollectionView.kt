@@ -10,10 +10,10 @@ All rights reserved.
 
 data class CollectionView (
 
-	val spaceBetweenCells : Int,
-	val backgroundColor : String,
-	val height : Int,
-	val borderColor : String,
-	val cornerRadius : Int,
-	val borderWidth : Int
+	var spaceBetweenCells : Int,
+	var backgroundColor : String,
+	var height : Int,
+	var borderColor : String,
+	var cornerRadius : Int,
+	var borderWidth : Int
 )

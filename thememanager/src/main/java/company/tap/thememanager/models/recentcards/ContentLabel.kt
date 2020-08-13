@@ -11,6 +11,6 @@ All rights reserved.
 
 data class ContentLabel (
 
-	val textColor : String,
-	val textFont : Int
+	var textColor : String,
+	var textFont : Int
 )

@@ -10,14 +10,14 @@ All rights reserved.
 
 data class CommonAttributes (
 
-	val backgroundColor : String,
-	val glowingBackgroundColor : String,
-	val borderColor : String,
-	val cornerRadius : Int,
-	val borderWidth : Int,
-	val itemSpacing : Int,
-	val chipHeight : Int,
-	val shadow : Shadow,
-	val glowingShadow : GlowingShadow,
-	val widthMargin : Int
+	var backgroundColor : String,
+	var glowingBackgroundColor : String,
+	var borderColor : String,
+	var cornerRadius : Int,
+	var borderWidth : Int,
+	var itemSpacing : Int,
+	var chipHeight : Int,
+	var shadow : Shadow,
+	var glowingShadow : GlowingShadow,
+	var widthMargin : Int
 )

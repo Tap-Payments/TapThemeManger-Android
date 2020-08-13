@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.res.Resources
 import android.widget.Toast
 import com.koushikdutta.ion.Ion
+import company.tap.thememanager.utils.PrefKeys
+import company.tap.thememanager.utils.PrefKeys.baseTheme
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -59,6 +61,7 @@ object ThemeManager {
             }
         }
         val valueKey = pathComponent[pathComponent.lastIndex]
+        baseTheme = view.get(valueKey) as String
         return view.get(valueKey) as T
     }
 

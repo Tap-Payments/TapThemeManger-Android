@@ -8,7 +8,7 @@ All rights reserved.
  **/
  
 data class TapSeparatorLine(
-        val backgroundColor: String? = null,
-        val height: String? = null,
-        val initialTrailingConstraint: Int? = null
+        var backgroundColor: String? = null,
+        var height: String? = null,
+        var initialTrailingConstraint: Int? = null
 )

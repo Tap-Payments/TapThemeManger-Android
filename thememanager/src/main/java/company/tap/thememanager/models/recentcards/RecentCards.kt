@@ -11,8 +11,8 @@ All rights reserved.
 
 data class RecentCards (
 
-	val backGroundColor : String,
-	val collectionView : CollectionView,
-	val headerView : HeaderView,
-	val chipUI : ChipUI
+	var backGroundColor : String,
+	var collectionView : CollectionView,
+	var headerView : HeaderView,
+	var chipUI : ChipUI
 )

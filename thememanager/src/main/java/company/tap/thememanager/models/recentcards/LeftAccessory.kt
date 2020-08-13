@@ -10,5 +10,5 @@ All rights reserved.
 
 data class LeftAccessory (
 
-	val width : Int
+	var width : Int
 )

@@ -10,7 +10,7 @@ All rights reserved.
 
 data class Buttons (
 
-	val textColor : String,
-	val font : Int,
-	val backGroundColor : String
+	var textColor : String,
+	var font : Int,
+	var backGroundColor : String
 )

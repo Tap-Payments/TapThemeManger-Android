@@ -14,6 +14,7 @@ internal object Constants {
 }
 
 internal object PrefKeys {
+    internal var baseTheme = "baseTheme"
     internal const val setAlphaSelector = "setAlpha"
     internal const val setBackgroundColorSelector = "setBackgroundColor"
     internal const val setTintColorSelector = "setTintColor"

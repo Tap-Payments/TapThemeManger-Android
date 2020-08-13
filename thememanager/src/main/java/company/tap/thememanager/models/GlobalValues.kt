@@ -7,5 +7,5 @@ package company.tap.thememanager.models
  *
  */
 data class GlobalValues(
-        val colors: Colors? = null
+        var colors: Colors? = null
 )

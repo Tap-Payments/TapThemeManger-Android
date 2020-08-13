@@ -7,9 +7,9 @@ All rights reserved.
  **/
 
 data class TapDragHandler (
-	val image : String,
-	val width : Int,
-	val height : Int,
-	val corner : Int,
-	val backgroundColor : String
+	var image : String,
+	var width : Int,
+	var height : Int,
+	var corner : Int,
+	var backgroundColor : String
 )

@@ -10,6 +10,6 @@ All rights reserved.
 
 data class HeaderView (
 
-	val buttons : Buttons,
-	val backGroundColor : String
+	var buttons : Buttons,
+	var backGroundColor : String
 )

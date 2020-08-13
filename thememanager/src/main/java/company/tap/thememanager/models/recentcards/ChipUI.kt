@@ -10,8 +10,8 @@ All rights reserved.
 
 data class ChipUI (
 
-	val commonAttributes : CommonAttributes,
-	val rightAccessory : RightAccessory,
-	val leftAccessory : LeftAccessory,
-	val contentLabel : ContentLabel
+	var commonAttributes : CommonAttributes,
+	var rightAccessory : RightAccessory,
+	var leftAccessory : LeftAccessory,
+	var contentLabel : ContentLabel
 )
