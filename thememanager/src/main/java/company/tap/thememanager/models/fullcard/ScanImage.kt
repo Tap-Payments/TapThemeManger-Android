@@ -10,6 +10,6 @@ All rights reserved.
 
 data class ScanImage (
 
-	val image : String,
-	val width : Int
+	val image : String? = null,
+	val width : Int? = null
 )

@@ -10,5 +10,5 @@ All rights reserved.
 
 data class RightAccessory (
 
-	var width : Int
+	var width : Int? = null
 )

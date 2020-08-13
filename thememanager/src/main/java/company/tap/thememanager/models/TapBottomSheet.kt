@@ -8,5 +8,5 @@ All rights reserved.
  **/
  
 data class TapBottomSheet(
-        var dimmedColor: String? = null
+        var dimmedColor: Int? = null
         )

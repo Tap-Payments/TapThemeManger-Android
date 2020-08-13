@@ -10,10 +10,10 @@ All rights reserved.
 
 data class CollectionView (
 
-	var spaceBetweenCells : Int,
-	var backgroundColor : String,
-	var height : Int,
-	var borderColor : String,
-	var cornerRadius : Int,
-	var borderWidth : Int
+	var spaceBetweenCells : Int? = null,
+	var backgroundColor : String? = null,
+	var height : Int? = null,
+	var borderColor : String? = null,
+	var cornerRadius : Int? = null,
+	var borderWidth : Int? = null
 )

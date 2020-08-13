@@ -7,9 +7,9 @@ All rights reserved.
  **/
 
 data class TapDragHandler (
-	var image : String,
-	var width : Int,
-	var height : Int,
-	var corner : Int,
-	var backgroundColor : String
+	var image : String? = null,
+	var width : Int? = null,
+	var height : Int? = null,
+	var corner : Int? = null,
+	var backgroundColor : String? = null
 )

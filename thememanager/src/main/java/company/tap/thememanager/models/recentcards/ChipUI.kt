@@ -10,8 +10,8 @@ All rights reserved.
 
 data class ChipUI (
 
-	var commonAttributes : CommonAttributes,
-	var rightAccessory : RightAccessory,
-	var leftAccessory : LeftAccessory,
-	var contentLabel : ContentLabel
+	var commonAttributes : CommonAttributes? = null,
+	var rightAccessory : RightAccessory? = null,
+	var leftAccessory : LeftAccessory? = null,
+	var contentLabel : ContentLabel? = null
 )

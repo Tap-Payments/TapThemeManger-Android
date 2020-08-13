@@ -10,7 +10,7 @@ All rights reserved.
 
 data class ScanImage (
 
-	val image : String,
-	val selected : String,
-	val width : Int
+		var image : String? = null,
+		var selected : String? = null,
+		var width : Int? = null
 )

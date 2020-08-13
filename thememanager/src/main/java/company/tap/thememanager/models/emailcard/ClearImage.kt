@@ -9,6 +9,6 @@ All rights reserved.
 
 data class ClearImage (
 
-	val image : String,
-	val width : Int
+	val image : String ? = null,
+	val width : Int? = null
 )

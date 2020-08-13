@@ -10,8 +10,8 @@ All rights reserved.
 
 data class EmailCard (
 
-	val commonAttributes : CommonAttributes,
-	val iconImage : IconImage,
-	val clearImage : ClearImage,
-	val textFields : TextFields
+	val commonAttributes : CommonAttributes? = null,
+	val iconImage : IconImage? = null,
+	val clearImage : ClearImage? = null,
+	val textFields : TextFields? = null
 )

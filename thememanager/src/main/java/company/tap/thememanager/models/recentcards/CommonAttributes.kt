@@ -10,14 +10,14 @@ All rights reserved.
 
 data class CommonAttributes (
 
-	var backgroundColor : String,
-	var glowingBackgroundColor : String,
-	var borderColor : String,
-	var cornerRadius : Int,
-	var borderWidth : Int,
-	var itemSpacing : Int,
-	var chipHeight : Int,
-	var shadow : Shadow,
-	var glowingShadow : GlowingShadow,
-	var widthMargin : Int
+	var backgroundColor : String? = null,
+	var glowingBackgroundColor : String? = null,
+	var borderColor : String? = null,
+	var cornerRadius : Int? = null,
+	var borderWidth : Int? = null,
+	var itemSpacing : Int? = null,
+	var chipHeight : Int? = null,
+	var shadow : Shadow? = null,
+	var glowingShadow : GlowingShadow? = null,
+	var widthMargin : Int? = null
 )
