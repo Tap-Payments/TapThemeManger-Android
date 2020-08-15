@@ -2,7 +2,9 @@ package company.tap.thememanager.manager
 
 import android.graphics.Color
 import androidx.annotation.ColorInt
+import company.tap.thememanager.models.AmountSectionView
 import company.tap.thememanager.models.Colors
+import company.tap.thememanager.models.MerchantHeaderView
 
 /**
  * Created by OLAMONIR on 8/13/20.
@@ -105,5 +107,33 @@ object JsonParser {
   }
 
 
+    fun setObject10(){
+        var  merchantHeaderView = MerchantHeaderView()
+        merchantHeaderView.titleLabelFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.titleLabelFont")).toString()
+        merchantHeaderView.titleLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.titleLabelColor")).toString()
+        merchantHeaderView.subTitleLabelFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.subTitleLabelFont")).toString()
+        merchantHeaderView.subTitleLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.subTitleLabelColor")).toString()
+        merchantHeaderView.merchantLogoCorner = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoCorner")).toString()
+        merchantHeaderView.merchantLogoPlaceHolderColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderColor")).toString()
+        merchantHeaderView.merchantLogoPlaceHolderFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderFont")).toString()
+        merchantHeaderView.merchantLogoPlaceHolderLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderLabelColor")).toString()
+        merchantHeaderView.backgroundColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.backgroundColor")).toString()
 
+
+    }
+
+    fun setObject11(){
+        var  amountSectionView = AmountSectionView()
+        amountSectionView.originalAmountLabelFont = Color.parseColor(ThemeManager.getValue("AmountSectionView.originalAmountLabelFont")).toString()
+        amountSectionView.originalAmountLabelColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.originalAmountLabelColor")).toString()
+        amountSectionView.convertedAmountLabelFont = Color.parseColor(ThemeManager.getValue("AmountSectionView.convertedAmountLabelFont")).toString()
+        amountSectionView.convertedAmountLabelColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.convertedAmountLabelColor")).toString()
+        amountSectionView.itemsLabelFont = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsLabelFont")).toString()
+        amountSectionView.itemsLabelColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsLabelColor")).toString()
+        amountSectionView.itemsNumberButtonBackgroundColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBackgroundColor")).toString()
+        amountSectionView.itemsNumberButtonBorder = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder")).toString()
+        amountSectionView.backgroundColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.backgroundColor")).toString()
+
+
+    }
 }

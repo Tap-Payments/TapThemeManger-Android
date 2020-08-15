@@ -20,7 +20,7 @@ data class AmountSectionView(
 
 )
 
-class ButtonBorder(
+data class ButtonBorder(
         val color: String? = null,
         val width: Int? = null
 

@@ -14,21 +14,22 @@ data class ActionButton (
 
         )
 
-class BackgroundColorTheme (
+data class BackgroundColorTheme (
         val Otp: String? = null,
         val default: String? = null
 
         )
 
-class ValidTheme (
+data class ValidTheme (
         val goLoginBackgroundColor: String? = null,
         val paymentBackgroundColor: String? = null
 
         )
 
-class InvalidTheme {
+data class InvalidTheme (
 val backgroundColor :String?=null
-}
+)
+
 
 class CommonTheme (
         val titleLabelFont: String? = null,

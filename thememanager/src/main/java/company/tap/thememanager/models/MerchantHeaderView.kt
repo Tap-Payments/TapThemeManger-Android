@@ -7,14 +7,14 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class MerchantHeaderView (
-        val titleLabelFont: String? = null,
-        val titleLabelColor: String? = null,
-        val subTitleLabelFont: String? = null,
-        val subTitleLabelColor: String? = null,
-        val merchantLogoCorner: Int? = null,
-        val merchantLogoPlaceHolderColor: String? = null,
-        val merchantLogoPlaceHolderFont: String? = null,
-        val merchantLogoPlaceHolderLabelColor: String? = null,
-        val backgroundColor: String? = null
+        var titleLabelFont: String? = null,
+        var titleLabelColor: String? = null,
+        var subTitleLabelFont: String? = null,
+        var subTitleLabelColor: String? = null,
+        var merchantLogoCorner: Int? = null,
+        var merchantLogoPlaceHolderColor: String? = null,
+        var merchantLogoPlaceHolderFont: String? = null,
+        var merchantLogoPlaceHolderLabelColor: String? = null,
+        var backgroundColor: String? = null
 
 )
