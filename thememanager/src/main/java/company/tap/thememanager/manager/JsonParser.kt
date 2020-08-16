@@ -303,6 +303,29 @@ object JsonParser {
 
     fun setObject16(){
         var goPay = goPay()
-        goPay.loginBar
+        goPay.loginBar?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.backgroundColor")).toString()
+        goPay.loginBar?.underline?.selected?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.underline.selected.backgroundColor")).toString()
+        goPay.loginBar?.underline?.unselected?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.underline.unselected.backgroundColor")).toString()
+        goPay.loginBar?.title?.selected?.textColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.selected.textColor")).toString()
+        goPay.loginBar?.title?.selected?.textFont = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.selected.textFont")).toString()
+        goPay.loginBar?.title?.otherSegmentSelected?.textColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.otherSegmentSelected.textColor")).toString()
+        goPay.loginBar?.title?.otherSegmentSelected?.textFont = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.otherSegmentSelected.textFont")).toString()
+        goPay.loginBar?.hintLabel?.textFont = Color.parseColor(ThemeManager.getValue("goPay.loginBar.hintLabel.textFont")).toString()
+        goPay.loginBar?.hintLabel?.textColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.hintLabel.textColor")).toString()
+
+        goPay.passwordView?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordView.backgroundColor")).toString()
+
+        goPay.passwordField?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.backgroundColor")).toString()
+        goPay.passwordField?.textFont = Color.parseColor(ThemeManager.getValue("goPay.passwordField.textFont")).toString()
+        goPay.passwordField?.textColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.textColor")).toString()
+        goPay.passwordField?.placeHolderColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.placeHolderColor")).toString()
+        goPay.passwordField?.showPasswordIcon = Color.parseColor(ThemeManager.getValue("goPay.passwordField.showPasswordIcon")).toString()
+        goPay.passwordField?.hidePasswordIcon = Color.parseColor(ThemeManager.getValue("goPay.passwordField.hidePasswordIcon")).toString()
+        goPay.passwordField?.underline?.empty?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.underline.empty.backgroundColor")).toString()
+        goPay.passwordField?.underline?.filled?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.underline.filled.backgroundColor")).toString()
+    }
+
+    fun setObject17(){
+
     }
 }

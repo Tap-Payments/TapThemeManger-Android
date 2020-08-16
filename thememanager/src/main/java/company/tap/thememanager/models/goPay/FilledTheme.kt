@@ -7,4 +7,4 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class FilledTheme(
-        val backgroundColor: String? = null)
+        var backgroundColor: String? = null)

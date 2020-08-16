@@ -7,6 +7,6 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class TitleTheme (
-        val selected: selectedTitleTheme? = null,
-        val otherSegmentSelected: otherSegmentSelectedTitleTheme? = null
+        var selected: selectedTitleTheme? = null,
+        var otherSegmentSelected: otherSegmentSelectedTitleTheme? = null
 )

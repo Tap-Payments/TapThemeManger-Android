@@ -7,5 +7,5 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class PasswordView (
-        val backgroundColor:String?= null
+        var backgroundColor:String?= null
 )

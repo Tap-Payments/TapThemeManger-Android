@@ -7,7 +7,7 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class HintLabelTheme (
-        val textFont: String? = null,
-        val textColor: String? = null
+        var textFont: String? = null,
+        var textColor: String? = null
 
 )

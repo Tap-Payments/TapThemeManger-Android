@@ -7,7 +7,7 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class underLinegoPay (
-        val empty: EmptyTheme?=null,
-        val filled: FilledTheme?=null
+        var empty: EmptyTheme?=null,
+        var filled: FilledTheme?=null
 
 )
