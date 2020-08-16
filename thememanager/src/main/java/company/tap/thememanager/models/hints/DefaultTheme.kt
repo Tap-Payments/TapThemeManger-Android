@@ -7,10 +7,10 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class DefaultTheme (
-        val textFont: String? = null,
-        val textColor: String? = null,
-        val backgroundColor: String? = null,
-        val borderColor: String? = null,
-        val actionButtonTextColor: String? = null,
-        val actionButtonTextFont: String? = null
+        var textFont: String? = null,
+        var textColor: String? = null,
+        var backgroundColor: String? = null,
+        var borderColor: String? = null,
+        var actionButtonTextColor: String? = null,
+        var actionButtonTextFont: String? = null
 )

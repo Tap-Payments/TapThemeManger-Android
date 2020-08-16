@@ -7,8 +7,8 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class goPay (
-        val loginBar: LoginBar?= null,
-        val passwordView: PasswordView?= null,
-        val passwordField: PasswordField?= null
+        var loginBar: LoginBar?= null,
+        var passwordView: PasswordView?= null,
+        var passwordField: PasswordField?= null
 
 )

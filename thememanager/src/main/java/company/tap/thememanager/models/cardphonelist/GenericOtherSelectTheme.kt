@@ -7,6 +7,6 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class GenericOtherSelectTheme (
-        val backgroundColor:String?=null,
-        val alpha:String?=null
+        var backgroundColor:String?=null,
+        var alpha:String?=null
 )

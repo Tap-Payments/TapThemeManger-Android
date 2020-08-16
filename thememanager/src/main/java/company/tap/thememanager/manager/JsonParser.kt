@@ -5,6 +5,9 @@ import company.tap.thememanager.models.amountsectionview.AmountSectionView
 import company.tap.thememanager.models.Colors
 import company.tap.thememanager.models.MerchantHeaderView
 import androidx.core.graphics.toColorInt
+import company.tap.thememanager.models.cardphonelist.CardPhoneList
+import company.tap.thememanager.models.goPay.goPay
+import company.tap.thememanager.models.hints.Hints
 import company.tap.thememanager.models.horizontallist.HorizontalList
 import company.tap.thememanager.models.itemlist.ItemList
 
@@ -221,11 +224,85 @@ object JsonParser {
 
         fun setObject13(){
         var  itemsList = ItemList()
-            itemsList.backgroundColor = Color.parseColor(ThemeManager.getValue("itemsList.backgroundColor")).toString()
-            itemsList.separatorColor = Color.parseColor(ThemeManager.getValue("itemsList.separatorColor")).toString()
-            itemsList.item?.descriptionBackgroundColor = Color.parseColor(ThemeManager.getValue("itemsList.item.descriptionBackgroundColor")).toString()
-            itemsList.item?.descriptionBackgroundColor = Color.parseColor(ThemeManager.getValue("itemsList.item.descriptionBackgroundColor")).toString()
+            itemsList.backgroundColor = Color.parseColor(ThemeManager.getValue("ItemList.backgroundColor")).toString()
+            itemsList.separatorColor = Color.parseColor(ThemeManager.getValue("ItemList.separatorColor")).toString()
+            itemsList.item?.descriptionBackgroundColor = Color.parseColor(ThemeManager.getValue("ItemList.item.descriptionBackgroundColor")).toString()
+            itemsList.item?.backgroundColor = Color.parseColor(ThemeManager.getValue("ItemList.item.backgroundColor")).toString()
+            itemsList.item?.titleLabelFont = Color.parseColor(ThemeManager.getValue("ItemList.item.titleLabelFont")).toString()
+            itemsList.item?.titleLabelColor = Color.parseColor(ThemeManager.getValue("ItemList.item.titleLabelColor")).toString()
+            itemsList.item?.descLabelFont = Color.parseColor(ThemeManager.getValue("ItemList.item.descLabelFont")).toString()
+            itemsList.item?.priceLabelFont = Color.parseColor(ThemeManager.getValue("ItemList.item.priceLabelFont")).toString()
+            itemsList.item?.priceLabelColor = Color.parseColor(ThemeManager.getValue("ItemList.item.priceLabelColor")).toString()
+            itemsList.item?.calculatedPriceLabelFont = Color.parseColor(ThemeManager.getValue("ItemList.item.calculatedPriceLabelFont")).toString()
+            itemsList.item?.calculatedPriceLabelColor = Color.parseColor(ThemeManager.getValue("ItemList.item.calculatedPriceLabelColor")).toString()
+            itemsList.item?.count?.backgroundColor = Color.parseColor(ThemeManager.getValue("ItemList.item.count.backgroundColor")).toString()
+            itemsList.item?.count?.countLabelFont = Color.parseColor(ThemeManager.getValue("ItemList.item.count.countLabelFont")).toString()
+            itemsList.item?.count?.countLabelColor = Color.parseColor(ThemeManager.getValue("ItemList.item.count.countLabelColor")).toString()
+
+        }
 
 
+    fun setObject14(){
+        var  cardPhoneList = CardPhoneList()
+        cardPhoneList.backgroundColor = Color.parseColor(ThemeManager.getValue("CardPhoneList.backgroundColor")).toString()
+        cardPhoneList.maxWidth = Color.parseColor(ThemeManager.getValue("CardPhoneList.maxWidth")).toString().toInt()
+        cardPhoneList.insets = Color.parseColor(ThemeManager.getValue("CardPhoneList.insets")).toString().toInt()
+        cardPhoneList.underline?.selected?.backgroundColor = Color.parseColor(ThemeManager.getValue("CardPhoneList.underline.selected.backgroundColor")).toString()
+        cardPhoneList.underline?.unselected?.backgroundColor = Color.parseColor(ThemeManager.getValue("CardPhoneList.underline.unselected.backgroundColor")).toString()
+        cardPhoneList.icon?.selected?.backgroundColor = Color.parseColor(ThemeManager.getValue("CardPhoneList.icon.selected.backgroundColor")).toString()
+        cardPhoneList.icon?.selected?.alpha = Color.parseColor(ThemeManager.getValue("CardPhoneList.icon.selected.alpha")).toString()
+        cardPhoneList.icon?.otherSegmentSelected?.backgroundColor = Color.parseColor(ThemeManager.getValue("CardPhoneList.icon.otherSegmentSelected.backgroundColor")).toString()
+        cardPhoneList.icon?.otherSegmentSelected?.alpha = Color.parseColor(ThemeManager.getValue("CardPhoneList.icon.otherSegmentSelected.alpha")).toString()
+        cardPhoneList.icon?.unselected?.backgroundColor = Color.parseColor(ThemeManager.getValue("CardPhoneList.icon.unselected.backgroundColor")).toString()
+        cardPhoneList.icon?.unselected?.alpha = Color.parseColor(ThemeManager.getValue("CardPhoneList.icon.unselected.alpha")).toString()
+    }
+
+    fun setObject15(){
+        var  hints = Hints()
+        hints.Warning?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Warning.textFont")).toString()
+        hints.Warning?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.textColor")).toString()
+        hints.Warning?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.backgroundColor")).toString()
+        hints.Warning?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.borderColor")).toString()
+        hints.Warning?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.actionButtonTextColor")).toString()
+        hints.Warning?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Warning.actionButtonTextFont")).toString()
+
+
+        hints.Error?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Error.textFont")).toString()
+        hints.Error?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Error.textColor")).toString()
+        hints.Error?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Error.backgroundColor")).toString()
+        hints.Error?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Error.borderColor")).toString()
+        hints.Error?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Error.actionButtonTextColor")).toString()
+        hints.Error?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Error.actionButtonTextFont")).toString()
+
+
+        hints.Default?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Default.textFont")).toString()
+        hints.Default?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Default.textColor")).toString()
+        hints.Default?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Default.backgroundColor")).toString()
+        hints.Default?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Default.borderColor")).toString()
+        hints.Default?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Default.actionButtonTextColor")).toString()
+        hints.Default?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Default.actionButtonTextFont")).toString()
+
+
+        hints.Scanned?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Scanned.textFont")).toString()
+        hints.Scanned?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.textColor")).toString()
+        hints.Scanned?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.backgroundColor")).toString()
+        hints.Scanned?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.borderColor")).toString()
+        hints.Scanned?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.actionButtonTextColor")).toString()
+        hints.Scanned?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Scanned.actionButtonTextFont")).toString()
+
+
+        hints.GoPayLogin?.textFont = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.textFont")).toString()
+        hints.GoPayLogin?.textColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.textColor")).toString()
+        hints.GoPayLogin?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.backgroundColor")).toString()
+        hints.GoPayLogin?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.borderColor")).toString()
+        hints.GoPayLogin?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.actionButtonTextColor")).toString()
+        hints.GoPayLogin?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.actionButtonTextFont")).toString()
+
+
+    }
+
+    fun setObject16(){
+        var goPay = goPay()
+        goPay.loginBar
     }
 }

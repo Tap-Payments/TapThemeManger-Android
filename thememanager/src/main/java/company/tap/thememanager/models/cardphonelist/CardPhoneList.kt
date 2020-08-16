@@ -7,11 +7,11 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class CardPhoneList (
-        val backgroundColor: String? = null,
-        val maxWidth: Int? = null,
-        val insets: Int? = null,
-        val underline: underTheme? = null,
-        val icon: iconTheme? = null
+        var backgroundColor: String? = null,
+        var maxWidth: Int? = null,
+        var insets: Int? = null,
+        var underline: underTheme? = null,
+        var icon: iconTheme? = null
 
 
 )

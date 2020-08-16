@@ -7,7 +7,7 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class CountTheme (
-        val backgroundColor: String? = null,
-        val countLabelFont: String? = null,
-        val countLabelColor: String? = null
+        var backgroundColor: String? = null,
+        var countLabelFont: String? = null,
+        var countLabelColor: String? = null
 )

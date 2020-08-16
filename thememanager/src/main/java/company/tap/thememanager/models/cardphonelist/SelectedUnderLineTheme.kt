@@ -7,6 +7,6 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class SelectedUnderLineTheme (
-        val backgroundColor:String?=null
+        var backgroundColor:String?=null
 
 )
