@@ -1,19 +1,12 @@
-package company.tap.thememanager.models
+package company.tap.thememanager.models.itemlist
 
 /**
- * Created by AhlaamK on 8/13/20.
+ * Created by AhlaamK on 8/16/20.
 
 Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
-data class ItemList (
-        val backgroundColor: String? = null,
-        val separatorColor: String? = null,
-        val item: ItemTheme? = null
-
-)
-
-class ItemTheme (
+data class ItemTheme (
         val descriptionBackgroundColor: String? = null,
         val backgroundColor: String? = null,
         val titleLabelFont: String? = null,
@@ -25,9 +18,3 @@ class ItemTheme (
         val calculatedPriceLabelColor: String? = null,
         val count: CountTheme? = null
 )
-
-class CountTheme (
-        val backgroundColor: String? = null,
-        val countLabelFont: String? = null,
-        val countLabelColor: String? = null
- )

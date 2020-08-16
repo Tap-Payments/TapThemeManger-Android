@@ -1,10 +1,11 @@
 package company.tap.thememanager.manager
 
 import android.graphics.Color
-import androidx.annotation.ColorInt
-import company.tap.thememanager.models.AmountSectionView
+import company.tap.thememanager.models.amountsectionview.AmountSectionView
 import company.tap.thememanager.models.Colors
 import company.tap.thememanager.models.MerchantHeaderView
+import androidx.core.graphics.toColorInt
+import company.tap.thememanager.models.horizontallist.HorizontalList
 
 /**
  * Created by OLAMONIR on 8/13/20.
@@ -113,7 +114,7 @@ object JsonParser {
         merchantHeaderView.titleLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.titleLabelColor")).toString()
         merchantHeaderView.subTitleLabelFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.subTitleLabelFont")).toString()
         merchantHeaderView.subTitleLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.subTitleLabelColor")).toString()
-        merchantHeaderView.merchantLogoCorner = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoCorner")).toString()
+        merchantHeaderView.merchantLogoCorner = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoCorner")).toString().toColorInt()
         merchantHeaderView.merchantLogoPlaceHolderColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderColor")).toString()
         merchantHeaderView.merchantLogoPlaceHolderFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderFont")).toString()
         merchantHeaderView.merchantLogoPlaceHolderLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderLabelColor")).toString()
@@ -131,8 +132,22 @@ object JsonParser {
         amountSectionView.itemsLabelFont = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsLabelFont")).toString()
         amountSectionView.itemsLabelColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsLabelColor")).toString()
         amountSectionView.itemsNumberButtonBackgroundColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBackgroundColor")).toString()
-        amountSectionView.itemsNumberButtonBorder = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder")).toString()
-        amountSectionView.backgroundColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.backgroundColor")).toString()
+        amountSectionView.itemsNumberButtonBorder?.color = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder.color")).toString()
+        amountSectionView.itemsNumberButtonBorder?.width = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder.width")).toString().toInt()
+        amountSectionView.backgroundColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.backgroundColor")).toString().toColorInt()
+
+
+    }
+
+    fun setObject12(){
+        var  horizontalList = HorizontalList()
+        horizontalList.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.backgroundColor")).toString()
+        horizontalList.itemSpacing = Color.parseColor(ThemeManager.getValue("HorizontalList.itemSpacing")).toString().toInt()
+        horizontalList.margin = Color.parseColor(ThemeManager.getValue("HorizontalList.margin")).toString().toInt()
+        horizontalList.headers?.gatewayHeader = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader")).toString()
+        horizontalList.headers?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.backgroundColor")).toString()
+        horizontalList.headers?.leftButton?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.leftButton.labelTextColor")).toString()
+        horizontalList.headers?.leftButton?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.leftButton.labelTextFont")).toString()
 
 
     }
