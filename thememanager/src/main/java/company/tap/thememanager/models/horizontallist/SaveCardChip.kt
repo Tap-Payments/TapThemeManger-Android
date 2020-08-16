@@ -7,9 +7,9 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class SaveCardChip (
-        val backgroundColor:String?=null,
-        val labelTextFont:String?=null,
-        val labelTextColor:String?=null,
+        var backgroundColor:String?=null,
+        var labelTextFont:String?=null,
+        var labelTextColor:String?=null,
         val selected: SelectedTheme?=null,
         val unSelected: UnSelectedTheme?=null
 )

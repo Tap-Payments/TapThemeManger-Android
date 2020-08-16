@@ -7,7 +7,7 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class GatewayChips (
-        val backgroundColor:String?=null,
+        var backgroundColor:String?=null,
         val shadow: ShadowTheme?=null
 
 )

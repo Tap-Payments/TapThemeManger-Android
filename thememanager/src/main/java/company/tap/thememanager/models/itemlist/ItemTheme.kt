@@ -7,14 +7,14 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class ItemTheme (
-        val descriptionBackgroundColor: String? = null,
-        val backgroundColor: String? = null,
-        val titleLabelFont: String? = null,
-        val titleLabelColor: String? = null,
-        val descLabelFont: String? = null,
-        val priceLabelFont: String? = null,
-        val priceLabelColor: String? = null,
-        val calculatedPriceLabelFont: String? = null,
-        val calculatedPriceLabelColor: String? = null,
-        val count: CountTheme? = null
+        var descriptionBackgroundColor: String? = null,
+        var backgroundColor: String? = null,
+        var titleLabelFont: String? = null,
+        var titleLabelColor: String? = null,
+        var descLabelFont: String? = null,
+        var priceLabelFont: String? = null,
+        var priceLabelColor: String? = null,
+        var calculatedPriceLabelFont: String? = null,
+        var calculatedPriceLabelColor: String? = null,
+        var count: CountTheme? = null
 )

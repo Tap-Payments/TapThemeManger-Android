@@ -6,11 +6,8 @@ package company.tap.thememanager.models.horizontallist
 Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
-data class CurrencyChips (
-        var backgroundColor:String?=null,
+data class rightButtonAttr (
         var labelTextFont:String?=null,
-        var labelTextColor:String?=null,
-        var selected: SelectedTheme?=null,
-        var unSelected: UnSelectedTheme?=null
+        var labelTextColor:String?=null
 
 )

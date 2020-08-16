@@ -7,9 +7,9 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class GoPayChip (
-        val backgroundColor:String?=null,
-        val labelTextFont:String?=null,
-        val labelTextColor:String?=null,
-        val selected: SelectedTheme?=null,
-        val unSelected: UnSelectedTheme?=null
+        var backgroundColor:String?=null,
+        var labelTextFont:String?=null,
+        var labelTextColor:String?=null,
+        var selected: SelectedTheme?=null,
+        var unSelected: UnSelectedTheme?=null
 )

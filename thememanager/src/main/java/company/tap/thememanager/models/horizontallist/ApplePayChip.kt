@@ -7,9 +7,11 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class ApplePayChip(
-        val backgroundColor:String?=null,
-        val labelTextFont:String?=null,
-        val labelTextColor:String?=null,
-        val selected: SelectedTheme?=null,
-        val unSelected: UnSelectedTheme?=null
+        var backgroundColor:String?=null,
+        var applePayTitleFont:String?=null,
+        var applePayTitleColor:String?=null,
+        var appleLogoTitleFont: String?=null,
+        var appleLogoTitleColor: String?=null,
+        var selected: SelectedTheme?=null,
+        var unSelectedTheme: UnSelectedTheme?=null
 )

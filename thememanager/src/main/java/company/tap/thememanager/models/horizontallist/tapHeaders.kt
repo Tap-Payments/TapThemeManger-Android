@@ -8,8 +8,7 @@ All rights reserved.
  **/
 data class tapHeaders
 (
-        var gatewayHeader: String? = null,
-        var backgroundColor: String? = null,
-        var leftButton: leftButtonAttr? = null
+        var gatewayHeader: GatewayHeader ? = null
+
 
 )

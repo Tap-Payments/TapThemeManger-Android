@@ -7,12 +7,12 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class tapChips (
-        val radius:Int?=null,
-        val currencyChip: CurrencyChips?=null,
-        val gatewayChip: GatewayChips?=null,
-        val goPayChip: GoPayChip?=null,
-        val applePayChip: ApplePayChip?=null,
-        val savedCardChip: SaveCardChip?=null
+        var radius:Int?=null,
+        var currencyChip: CurrencyChips?=null,
+        var gatewayChip: GatewayChips?=null,
+        var goPayChip: GoPayChip?=null,
+        var applePayChip: ApplePayChip?=null,
+        var savedCardChip: SaveCardChip?=null
 
 
 )

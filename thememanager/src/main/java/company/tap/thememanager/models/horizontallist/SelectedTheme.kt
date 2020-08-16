@@ -7,5 +7,5 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class SelectedTheme (
-        val shadow: ShadowTheme?=null
+        var shadow: ShadowTheme?=null
 )

@@ -6,6 +6,7 @@ import company.tap.thememanager.models.Colors
 import company.tap.thememanager.models.MerchantHeaderView
 import androidx.core.graphics.toColorInt
 import company.tap.thememanager.models.horizontallist.HorizontalList
+import company.tap.thememanager.models.itemlist.ItemList
 
 /**
  * Created by OLAMONIR on 8/13/20.
@@ -139,15 +140,91 @@ object JsonParser {
 
     }
 
-    fun setObject12(){
-        var  horizontalList = HorizontalList()
+    fun setObject12() {
+        var horizontalList = HorizontalList()
         horizontalList.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.backgroundColor")).toString()
         horizontalList.itemSpacing = Color.parseColor(ThemeManager.getValue("HorizontalList.itemSpacing")).toString().toInt()
         horizontalList.margin = Color.parseColor(ThemeManager.getValue("HorizontalList.margin")).toString().toInt()
-        horizontalList.headers?.gatewayHeader = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader")).toString()
-        horizontalList.headers?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.backgroundColor")).toString()
-        horizontalList.headers?.leftButton?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.leftButton.labelTextColor")).toString()
-        horizontalList.headers?.leftButton?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.leftButton.labelTextFont")).toString()
+        horizontalList.headers?.gatewayHeader?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.backgroundColor")).toString()
+        horizontalList.headers?.gatewayHeader?.leftButton?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.leftButton.labelTextFont")).toString()
+        horizontalList.headers?.gatewayHeader?.leftButton?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.leftButton.labelTextColor")).toString()
+        horizontalList.headers?.gatewayHeader?.rightButton?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextFont")).toString()
+        horizontalList.headers?.gatewayHeader?.rightButton?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextColor")).toString()
+        horizontalList.chips?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextColor")).toString().toInt()
+
+        horizontalList.chips?.currencyChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.backgroundColor")).toString()
+        horizontalList.chips?.currencyChip?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.labelTextFont")).toString()
+        horizontalList.chips?.currencyChip?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.labelTextColor")).toString()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.color")).toString()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.radius")).toString().toInt()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.offsetWidth")).toString().toInt()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.offsetHeight")).toString().toInt()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.opacity")).toString().toInt()
+        horizontalList.chips?.currencyChip?.unSelected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.offsetWidth")).toString().toInt()
+        horizontalList.chips?.currencyChip?.unSelected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.offsetHeight")).toString().toInt()
+        horizontalList.chips?.currencyChip?.unSelected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.opacity")).toString().toInt()
+
+        horizontalList.chips?.gatewayChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.backgroundColor")).toString()
+        horizontalList.chips?.gatewayChip?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.color")).toString()
+        horizontalList.chips?.gatewayChip?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.radius")).toString().toInt()
+        horizontalList.chips?.gatewayChip?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.offsetWidth")).toString().toInt()
+        horizontalList.chips?.gatewayChip?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.offsetHeight")).toString().toInt()
+        horizontalList.chips?.gatewayChip?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.opacity")).toString().toInt()
+
+        horizontalList.chips?.goPayChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.backgroundColor")).toString()
+        horizontalList.chips?.goPayChip?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.labelTextFont")).toString()
+        horizontalList.chips?.goPayChip?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.labelTextColor")).toString()
+        horizontalList.chips?.goPayChip?.selected?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.shadow")).toString()
+        horizontalList.chips?.goPayChip?.selected?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.radius")).toString().toInt()
+        horizontalList.chips?.goPayChip?.selected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.offsetWidth")).toString().toInt()
+        horizontalList.chips?.goPayChip?.selected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.offsetHeight")).toString().toInt()
+        horizontalList.chips?.goPayChip?.selected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.opacity")).toString().toInt()
+        horizontalList.chips?.goPayChip?.unSelected?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelected.shadow")).toString()
+        horizontalList.chips?.goPayChip?.unSelected?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelected.radius")).toString().toInt()
+        horizontalList.chips?.goPayChip?.unSelected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelected.offsetWidth")).toString().toInt()
+        horizontalList.chips?.goPayChip?.unSelected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelected.offsetHeight")).toString().toInt()
+        horizontalList.chips?.goPayChip?.unSelected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelected.opacity")).toString().toInt()
+
+
+
+        horizontalList.chips?.applePayChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.applePayChip.backgroundColor")).toString()
+        horizontalList.chips?.applePayChip?.applePayTitleFont = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.applePayChip.applePayTitleFont")).toString()
+        horizontalList.chips?.applePayChip?.applePayTitleColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.applePayChip.applePayTitleColor")).toString()
+        horizontalList.chips?.applePayChip?.appleLogoTitleFont = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.applePayChip.appleLogoTitleFont")).toString()
+        horizontalList.chips?.applePayChip?.appleLogoTitleColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.applePayChip.appleLogoTitleColor")).toString()
+        horizontalList.chips?.applePayChip?.selected?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.shadow")).toString()
+        horizontalList.chips?.applePayChip?.selected?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.radius")).toString().toInt()
+        horizontalList.chips?.applePayChip?.selected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.offsetWidth")).toString().toInt()
+        horizontalList.chips?.applePayChip?.selected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.offsetHeight")).toString().toInt()
+        horizontalList.chips?.applePayChip?.selected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.opacity")).toString().toInt()
+        horizontalList.chips?.applePayChip?.unSelectedTheme?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelectedTheme.shadow")).toString()
+        horizontalList.chips?.applePayChip?.unSelectedTheme?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelectedTheme.radius")).toString().toInt()
+        horizontalList.chips?.applePayChip?.unSelectedTheme?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelectedTheme.offsetWidth")).toString().toInt()
+        horizontalList.chips?.applePayChip?.unSelectedTheme?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelectedTheme.offsetHeight")).toString().toInt()
+        horizontalList.chips?.applePayChip?.unSelectedTheme?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.unSelectedTheme.opacity")).toString().toInt()
+
+
+
+        horizontalList.chips?.savedCardChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.backgroundColor")).toString()
+        horizontalList.chips?.savedCardChip?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.labelTextFont")).toString()
+        horizontalList.chips?.savedCardChip?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.labelTextColor")).toString()
+        horizontalList.chips?.savedCardChip?.selected?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.selected.shadow.color")).toString()
+        horizontalList.chips?.savedCardChip?.selected?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.selected.shadow.radius")).toString().toInt()
+        horizontalList.chips?.savedCardChip?.selected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.selected.shadow.offsetWidth")).toString().toInt()
+        horizontalList.chips?.savedCardChip?.selected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.selected.shadow.offsetHeight")).toString().toInt()
+        horizontalList.chips?.savedCardChip?.selected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.unSelected.shadow.opacity")).toString().toInt()
+        horizontalList.chips?.savedCardChip?.unSelected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.unSelected.shadow.offsetWidth")).toString().toInt()
+        horizontalList.chips?.savedCardChip?.unSelected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.unSelected.shadow.offsetHeight")).toString().toInt()
+        horizontalList.chips?.savedCardChip?.unSelected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.savedCardChip.unSelected.shadow.opacity")).toString().toInt()
+
+    }
+
+        fun setObject13(){
+        var  itemsList = ItemList()
+            itemsList.backgroundColor = Color.parseColor(ThemeManager.getValue("itemsList.backgroundColor")).toString()
+            itemsList.separatorColor = Color.parseColor(ThemeManager.getValue("itemsList.separatorColor")).toString()
+            itemsList.item?.descriptionBackgroundColor = Color.parseColor(ThemeManager.getValue("itemsList.item.descriptionBackgroundColor")).toString()
+            itemsList.item?.descriptionBackgroundColor = Color.parseColor(ThemeManager.getValue("itemsList.item.descriptionBackgroundColor")).toString()
 
 
     }
