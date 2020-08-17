@@ -123,7 +123,7 @@ object JsonParser {
         inlineCard.clearImage?.width = (ThemeManager.getValue("inlineCard.clearImage.width")as String).toColorInt()
 
 
-        inlineCard.textFields?.textColor = (ThemeManager.getValue("inlineCard.textFields.textColor")as String).toString()
+        inlineCard.textFields?.textColor = (ThemeManager.getValue("inlineCard.textFields.textColor")as String).toColorInt()
         inlineCard.textFields?.errorTextColor = (ThemeManager.getValue("inlineCard.textFields.errorTextColor")as String).toString()
         inlineCard.textFields?.font = (ThemeManager.getValue("inlineCard.textFields.font")as String).toString()
         inlineCard.textFields?.placeHolderColor = (ThemeManager.getValue("inlineCard.textFields.placeHolderColor")as String).toString()

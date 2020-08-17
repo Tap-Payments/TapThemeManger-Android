@@ -2,8 +2,10 @@ package company.tap.thememanager.manager
 
 import android.content.Context
 import android.content.res.Resources
+import android.util.Log
 import android.widget.Toast
 import com.koushikdutta.ion.Ion
+import org.json.JSONException
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -33,7 +35,12 @@ object ThemeManager {
             writer.write(line)
             line = reader.readLine()
         }
-        theme = JSONObject(writer.toString())
+        try {
+            theme = JSONObject(writer.toString())
+        } catch ( e : JSONException) {
+            Log.e("APP", "unexpected JSON exception", e);
+            // Do something to recover ... or kill the app.
+        }
     }
 
     fun loadTapTheme(context: Context, url: String) {
@@ -45,7 +52,7 @@ object ThemeManager {
                         Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
                     } else {
                         theme = JSONObject(result.toString())
-                        Toast.makeText(context, result.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Theme switched", Toast.LENGTH_SHORT).show()
                     }
                 }
     }

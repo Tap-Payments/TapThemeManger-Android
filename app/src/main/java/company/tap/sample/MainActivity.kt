@@ -3,6 +3,7 @@ package company.tap.sample
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import company.tap.sample.databinding.ActivityMainBinding
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        initAppTheme(R.raw.default_light_theme)
+        initAppTheme(R.raw.defaultdarktheme)
     }
 
     private fun initAppTheme(theme: Int) {
@@ -40,9 +41,14 @@ class MainActivity : AppCompatActivity() {
 
 
     fun swap(view: View?) {
-        if (currentTheme == R.raw.default_light_theme)
-            initAppTheme(R.raw.default_dark_theme)
-        else
-            initAppTheme(R.raw.default_light_theme)
+        if (currentTheme == R.raw.defaultdarktheme) {
+            initAppTheme(R.raw.defaultlighttheme)
+            Toast.makeText(applicationContext, "Theme switched to defaultlighttheme", Toast.LENGTH_SHORT).show()
+        }
+        else {
+            initAppTheme(R.raw.defaultdarktheme)
+            Toast.makeText(applicationContext, "Theme switched defaultdarktheme", Toast.LENGTH_SHORT).show()
+
+        }
     }
 }

@@ -526,7 +526,7 @@
             "backgroundColor" : "whiteTwo",
             "underline": {
                 "selected": {
-                    "backgroundColor" : "deepSkyBlue",
+                    "backgroundColor" : "deepSkyBlue"
                 },
                 "unselected": {
                     "backgroundColor" : "brownGrey"
