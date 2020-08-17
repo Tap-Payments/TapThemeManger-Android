@@ -7,7 +7,7 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class BackgroundColorTheme (
-        val Otp: String? = null,
-        val default: String? = null
+        var Otp: String? = null,
+        var default: String? = null
 
 )

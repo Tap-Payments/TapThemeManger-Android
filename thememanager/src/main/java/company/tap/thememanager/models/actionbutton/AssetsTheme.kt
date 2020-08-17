@@ -7,8 +7,8 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class AssetsTheme (
-        val loading: String? = null,
-        val error: String? = null,
-        val success: String? = null
+        var loading: String? = null,
+        var error: String? = null,
+        var success: String? = null
 
 )

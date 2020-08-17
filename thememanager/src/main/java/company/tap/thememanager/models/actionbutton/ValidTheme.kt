@@ -7,7 +7,7 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class ValidTheme (
-        val goLoginBackgroundColor: String? = null,
-        val paymentBackgroundColor: String? = null
+        var goLoginBackgroundColor: String? = null,
+        var paymentBackgroundColor: String? = null
 
 )

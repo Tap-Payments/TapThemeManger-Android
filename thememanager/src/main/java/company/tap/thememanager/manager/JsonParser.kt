@@ -5,6 +5,7 @@ import company.tap.thememanager.models.amountsectionview.AmountSectionView
 import company.tap.thememanager.models.Colors
 import company.tap.thememanager.models.MerchantHeaderView
 import androidx.core.graphics.toColorInt
+import company.tap.thememanager.models.actionbutton.ActionButton
 import company.tap.thememanager.models.cardphonelist.CardPhoneList
 import company.tap.thememanager.models.goPay.goPay
 import company.tap.thememanager.models.hints.Hints
@@ -326,6 +327,20 @@ object JsonParser {
     }
 
     fun setObject17(){
+         var actionButton = ActionButton()
+        actionButton.Common?.titleLabelFont = Color.parseColor(ThemeManager.getValue("ActionButton.Common.titleLabelFont")).toString()
+        actionButton.Common?.titleLabelColor = Color.parseColor(ThemeManager.getValue("ActionButton.Common.titleLabelColor")).toString()
+        actionButton.Common?.assets?.error = Color.parseColor(ThemeManager.getValue("ActionButton.Common.assets.error")).toString()
+        actionButton.Common?.assets?.loading = Color.parseColor(ThemeManager.getValue("ActionButton.Common.assets.loading")).toString()
+        actionButton.Common?.assets?.success = Color.parseColor(ThemeManager.getValue("ActionButton.Common.assets.success")).toString()
 
+
+        actionButton.Invalid?.backgroundColor = Color.parseColor(ThemeManager.getValue("ActionButton.Invalid.backgroundColor")).toString()
+
+        actionButton.Valid?.goLoginBackgroundColor = Color.parseColor(ThemeManager.getValue("ActionButton.Valid.goLoginBackgroundColor")).toString()
+        actionButton.Valid?.paymentBackgroundColor = Color.parseColor(ThemeManager.getValue("ActionButton.Valid.paymentBackgroundColor")).toString()
+
+        actionButton.BackgroundColor?.Otp = Color.parseColor(ThemeManager.getValue("ActionButton.BackgroundColor.Otp")).toString()
+        actionButton.BackgroundColor?.default = Color.parseColor(ThemeManager.getValue("ActionButton.BackgroundColor.default")).toString()
     }
 }

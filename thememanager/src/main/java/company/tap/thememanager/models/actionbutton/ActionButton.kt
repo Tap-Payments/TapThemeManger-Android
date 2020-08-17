@@ -7,10 +7,10 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class ActionButton (
-        val Common: CommonTheme?= null,
-        val Invalid: InvalidTheme?= null,
-        val Valid: ValidTheme?= null,
-        val BackgroundColor: BackgroundColorTheme?= null
+        var Common: CommonTheme?= null,
+        var Invalid: InvalidTheme?= null,
+        var Valid: ValidTheme?= null,
+        var BackgroundColor: BackgroundColorTheme?= null
 
         )
 

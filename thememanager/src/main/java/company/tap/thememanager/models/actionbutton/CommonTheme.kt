@@ -7,8 +7,8 @@ Copyright (c) 2020    Tap Payments.
 All rights reserved.
  **/
 data class CommonTheme (
-        val titleLabelFont: String? = null,
-        val titleLabelColor: String? = null,
-        val assets: AssetsTheme? = null
+        var titleLabelFont: String? = null,
+        var titleLabelColor: String? = null,
+        var assets: AssetsTheme? = null
 
 )
