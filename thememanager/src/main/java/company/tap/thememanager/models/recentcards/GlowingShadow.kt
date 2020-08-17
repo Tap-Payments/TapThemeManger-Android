@@ -10,9 +10,9 @@ All rights reserved.
 
 data class GlowingShadow (
 
-	var color : String,
-	var radius : Int,
-	var offsetWidth : Int,
-	var offsetHeight : Int,
-	var opacity : Int
+	var color : String? = null,
+	var radius : Int? = null,
+	var offsetWidth : Int? = null,
+	var offsetHeight : Int? = null,
+	var opacity : Int? = null
 )

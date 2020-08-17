@@ -9,9 +9,9 @@ All rights reserved.
 
 data class SaveCardOption (
 
-	val labelTextColor : String,
-	val labelTextFont : Int,
-	val switchTintColor : String,
-	val switchThumbColor : String,
-	val switchOnThumbColor : String
+        var labelTextColor : String? = null,
+        var labelTextFont : Int? = null,
+        var switchTintColor : String? = null,
+        var switchThumbColor : String? = null,
+        var switchOnThumbColor : String? = null
 )

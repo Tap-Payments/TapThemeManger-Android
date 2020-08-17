@@ -9,9 +9,9 @@ All rights reserved.
 
 data class FullCard (
 
-	val commonAttributes : CommonAttributes,
-	val iconImage : IconImage,
-	val scanImage : ScanImage,
-	val textFields : TextFields,
-	val saveCardOption : SaveCardOption
+	val commonAttributes : CommonAttributes? = null,
+	val iconImage : IconImage? = null,
+	val scanImage : ScanImage? = null,
+	val textFields : TextFields? = null,
+	val saveCardOption : SaveCardOption? = null
 )

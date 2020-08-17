@@ -1,5 +1,6 @@
 package company.tap.thememanager.models
 
+
 /**
  *
  * Created by Mario Gamal on 7/20/20
@@ -7,31 +8,37 @@ package company.tap.thememanager.models
  *
  */
 data class Colors(
-        var white: String? = null,
-        var black: String? = null,
-        var black50: String? = null,
-        var lightPeach: String? = null,
-        var greyishBrown: String? = null,
-        var veryLightPinkTwo: String? = null,
-        var brownGrey: String? = null,
-        var whiteTwo: String? = null,
-        var deepSkyBlue: String? = null,
-        var white30: String? = null,
-        var lightPeriwinkle: String? = null,
-        var white80: String? = null,
-        var vibrantGreen: String? = null,
-        var vibrantGreenTwo: String? = null,
-        var paleLilac: String? = null,
-        var clear: String? = null,
-        var brownGreyTwo: String? = null,
-        var brownGreyThree: String? = null,
-        var orange: String? = null,
-        var apricot30: String? = null,
-        var reddishOrange20: String? = null,
-        var cherryRed: String? = null,
-        var cherryRed10: String? = null,
-        var cherryRed20: String? = null,
-        var brownGreyFive: String? = null,
-        var deepSkyBlue15: String? = null,
-        var veryLightPinkThree: String? = null
+        var white:  Int? = null,
+        var black:  Int? = null,
+        var black50:  Int? = null,
+        var lightPeach:  Int? = null,
+        var greyishBrown:  Int? = null,
+        var veryLightPinkTwo:  Int? = null,
+        var brownGrey:  Int? = null,
+        var whiteTwo:  Int?  = null,
+        var deepSkyBlue:  Int? = null,
+        var white30:  Int? = null,
+        var lightPeriwinkle:  Int? = null,
+        var white80:  Int? = null,
+        var vibrantGreen:  Int? = null,
+        var vibrantGreenTwo:  Int? = null,
+        var paleLilac:  Int? = null,
+        var clear:  Int? = null,
+        var brownGreyTwo:  Int? = null,
+        var brownGreyThree:  Int? = null,
+        var orange:  Int? = null,
+        var apricot30:  Int? = null,
+        var reddishOrange20:  Int? = null,
+        var cherryRed:  Int? = null,
+        var cherryRed10:  Int? = null,
+        var cherryRed20:  Int? = null,
+        var brownGreyFive:  Int? = null,
+        var deepSkyBlue15:  Int? = null,
+        var azure:  Int? = null,
+        var brownGreySix:  Int? = null,
+        var brownGreySeven:  Int? = null,
+        var white78:  Int? = null,
+        var brownGreyFour:  Int? = null,
+        var veryLightPinkThree:  Int? = null
+
 )

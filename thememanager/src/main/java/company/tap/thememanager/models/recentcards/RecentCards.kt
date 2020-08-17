@@ -11,8 +11,8 @@ All rights reserved.
 
 data class RecentCards (
 
-	var backGroundColor : String,
-	var collectionView : CollectionView,
-	var headerView : HeaderView,
-	var chipUI : ChipUI
+	var backGroundColor : String? = null,
+	var collectionView : CollectionView? = null,
+	var headerView : HeaderView? = null,
+	var chipUI : ChipUI? = null
 )

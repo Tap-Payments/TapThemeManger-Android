@@ -11,6 +11,6 @@ All rights reserved.
 
 data class ContentLabel (
 
-	var textColor : String,
-	var textFont : Int
+	var textColor : String? = null,
+	var textFont : Int? = null
 )

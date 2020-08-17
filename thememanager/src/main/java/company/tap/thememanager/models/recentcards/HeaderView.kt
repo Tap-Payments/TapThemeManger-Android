@@ -10,6 +10,6 @@ All rights reserved.
 
 data class HeaderView (
 
-	var buttons : Buttons,
-	var backGroundColor : String
+	var buttons : Buttons? = null,
+	var backGroundColor : String? = null
 )

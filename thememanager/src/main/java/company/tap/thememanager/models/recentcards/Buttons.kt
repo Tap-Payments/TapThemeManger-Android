@@ -10,7 +10,7 @@ All rights reserved.
 
 data class Buttons (
 
-	var textColor : String,
-	var font : Int,
-	var backGroundColor : String
+	var textColor : String? = null,
+	var font : Int? = null,
+	var backGroundColor : String? = null
 )

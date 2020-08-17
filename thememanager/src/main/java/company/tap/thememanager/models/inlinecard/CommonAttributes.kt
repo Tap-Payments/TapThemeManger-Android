@@ -9,13 +9,12 @@ All rights reserved.
 
 
 data class CommonAttributes (
-
-	val backgroundColor : String,
-	val borderColor : String,
-	val cornerRadius : Int,
-	val borderWidth : Int,
-	val itemSpacing : Int,
-	val cvvPlaceHolder : String,
-	val shadow : Shadow,
-	val widthMargin : Int
+	var backgroundColor : String? = null,
+	var borderColor : String? = null,
+	var cornerRadius : Int? = null,
+	var borderWidth : Int? = null,
+	var itemSpacing : Int? = null,
+	var cvvPlaceHolder : String? = null,
+	var shadow : Shadow? = null,
+	var widthMargin : Int? = null
 )
