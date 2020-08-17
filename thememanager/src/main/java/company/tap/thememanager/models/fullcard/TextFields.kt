@@ -9,8 +9,8 @@ All rights reserved.
 
 data class TextFields (
 
-	val textColor : String? = null,
-	val errorTextColor : String? = null,
-	val font : Int? = null,
-	val placeHolderColor : String? = null
+        var textColor : String? = null,
+        var errorTextColor : String? = null,
+        var font : Int? = null,
+        var placeHolderColor : String? = null
 )

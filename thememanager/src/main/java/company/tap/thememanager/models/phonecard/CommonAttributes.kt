@@ -9,11 +9,11 @@ All rights reserved.
 
 data class CommonAttributes (
 
-	val backgroundColor : String? = null,
-	val borderColor : String? = null,
-	val cornerRadius : Int? = null,
-	val borderWidth : Int? = null,
-	val itemSpacing : Int? = null,
-	val shadow : Shadow? = null,
-	val widthMargin : Int? = null
+        var backgroundColor : String? = null,
+        var borderColor : String? = null,
+        var cornerRadius : Int? = null,
+        var borderWidth : Int? = null,
+        var itemSpacing : Int? = null,
+        val shadow : Shadow? = null,
+        var widthMargin : Int? = null
 )

@@ -9,6 +9,6 @@ All rights reserved.
  
 data class TapSeparatorLine(
         var backgroundColor: String? = null,
-        var height: String? = null,
+        var height: Int? = null,
         var initialTrailingConstraint: Int? = null
 )

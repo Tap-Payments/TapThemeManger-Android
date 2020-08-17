@@ -9,6 +9,6 @@ All rights reserved.
 
 data class IconImage (
 
-	val image : String? = null,
-	val width : Int? = null
+        var image : String? = null,
+        var width : Int? = null
 )

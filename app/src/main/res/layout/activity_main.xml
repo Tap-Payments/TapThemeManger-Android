@@ -13,6 +13,7 @@
             app:textViewTheme="@{textViewTheme}"/>
 
         <Button
+            android:id="@+id/buttonSwap"
             android:onClick="swap"
             android:text="@string/swap"
             android:layout_gravity="center"
@@ -27,4 +28,10 @@
             name="textViewTheme"
             type="company.tap.thememanager.theme.TextViewTheme" />
     </data>
+
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="textViewTheme"-->
+<!--            type="company.tap.thememanager.models.inlinecard.InlineCard" />-->
+<!--    </data>-->
 </layout>

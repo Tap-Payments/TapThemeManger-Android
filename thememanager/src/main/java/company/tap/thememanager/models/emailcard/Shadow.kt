@@ -9,9 +9,9 @@ All rights reserved.
 
 data class Shadow (
 
-	val color : String? = null,
-	val radius : Int? = null,
-	val offsetWidth : Int? = null,
-	val offsetHeight : Int? = null,
-	val opacity : Int? = null
+        var color : String? = null,
+        var radius : Int? = null,
+        var offsetWidth : Int? = null,
+        var offsetHeight : Int? = null,
+        var opacity : Int? = null
 )
