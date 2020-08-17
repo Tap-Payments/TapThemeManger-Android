@@ -2,8 +2,7 @@ package company.tap.thememanager.manager
 
 import android.graphics.Color
 import company.tap.thememanager.models.amountsectionview.AmountSectionView
-import company.tap.thememanager.models.Colors
-import company.tap.thememanager.models.MerchantHeaderView
+
 import androidx.core.graphics.toColorInt
 import company.tap.thememanager.models.actionbutton.ActionButton
 import company.tap.thememanager.models.cardphonelist.CardPhoneList
@@ -13,10 +12,8 @@ import company.tap.thememanager.models.horizontallist.HorizontalList
 import company.tap.thememanager.models.itemlist.ItemList
 import androidx.annotation.ColorInt
 import androidx.core.graphics.toColorInt
-import company.tap.thememanager.models.Colors
-import company.tap.thememanager.models.TapBottomSheet
-import company.tap.thememanager.models.TapDragHandler
-import company.tap.thememanager.models.TapSeparatorLine
+import company.tap.thememanager.models.*
+
 import company.tap.thememanager.models.emailcard.EmailCard
 import company.tap.thememanager.models.fullcard.FullCard
 import company.tap.thememanager.models.inlinecard.CommonAttributes
@@ -317,69 +314,69 @@ object JsonParser {
 
     fun setObject10(){
         var  merchantHeaderView = MerchantHeaderView()
-        merchantHeaderView.titleLabelFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.titleLabelFont")).toString()
-        merchantHeaderView.titleLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.titleLabelColor")).toString()
-        merchantHeaderView.subTitleLabelFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.subTitleLabelFont")).toString()
-        merchantHeaderView.subTitleLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.subTitleLabelColor")).toString()
-        merchantHeaderView.merchantLogoCorner = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoCorner")).toString().toColorInt()
-        merchantHeaderView.merchantLogoPlaceHolderColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderColor")).toString()
-        merchantHeaderView.merchantLogoPlaceHolderFont = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderFont")).toString()
-        merchantHeaderView.merchantLogoPlaceHolderLabelColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderLabelColor")).toString()
-        merchantHeaderView.backgroundColor = Color.parseColor(ThemeManager.getValue("MerchantHeaderView.backgroundColor")).toString()
+        merchantHeaderView.titleLabelFont = (ThemeManager.getValue("MerchantHeaderView.titleLabelFont")) as String
+        merchantHeaderView.titleLabelColor = (ThemeManager.getValue("MerchantHeaderView.titleLabelColor")) as String
+        merchantHeaderView.subTitleLabelFont = (ThemeManager.getValue("MerchantHeaderView.subTitleLabelFont")) as String
+        merchantHeaderView.subTitleLabelColor = (ThemeManager.getValue("MerchantHeaderView.subTitleLabelColor")) as String
+        merchantHeaderView.merchantLogoCorner =(ThemeManager.getValue("MerchantHeaderView.merchantLogoCorner")as String).toColorInt()
+        merchantHeaderView.merchantLogoPlaceHolderColor = (ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderColor")) as String
+        merchantHeaderView.merchantLogoPlaceHolderFont = (ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderFont")) as String
+        merchantHeaderView.merchantLogoPlaceHolderLabelColor = (ThemeManager.getValue("MerchantHeaderView.merchantLogoPlaceHolderLabelColor")) as String
+        merchantHeaderView.backgroundColor = (ThemeManager.getValue("MerchantHeaderView.backgroundColor")) as String
 
 
     }
 
     fun setObject11(){
         var  amountSectionView = AmountSectionView()
-        amountSectionView.originalAmountLabelFont = Color.parseColor(ThemeManager.getValue("AmountSectionView.originalAmountLabelFont")).toString()
-        amountSectionView.originalAmountLabelColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.originalAmountLabelColor")).toString()
-        amountSectionView.convertedAmountLabelFont = Color.parseColor(ThemeManager.getValue("AmountSectionView.convertedAmountLabelFont")).toString()
-        amountSectionView.convertedAmountLabelColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.convertedAmountLabelColor")).toString()
-        amountSectionView.itemsLabelFont = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsLabelFont")).toString()
-        amountSectionView.itemsLabelColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsLabelColor")).toString()
-        amountSectionView.itemsNumberButtonBackgroundColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBackgroundColor")).toString()
-        amountSectionView.itemsNumberButtonBorder?.color = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder.color")).toString()
-        amountSectionView.itemsNumberButtonBorder?.width = Color.parseColor(ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder.width")).toString().toInt()
-        amountSectionView.backgroundColor = Color.parseColor(ThemeManager.getValue("AmountSectionView.backgroundColor")).toString().toColorInt()
+        amountSectionView.originalAmountLabelFont = (ThemeManager.getValue("AmountSectionView.originalAmountLabelFont")) as String
+        amountSectionView.originalAmountLabelColor =(ThemeManager.getValue("AmountSectionView.originalAmountLabelColor")) as String
+        amountSectionView.convertedAmountLabelFont = (ThemeManager.getValue("AmountSectionView.convertedAmountLabelFont")) as String
+        amountSectionView.convertedAmountLabelColor = (ThemeManager.getValue("AmountSectionView.convertedAmountLabelColor")) as String
+        amountSectionView.itemsLabelFont = (ThemeManager.getValue("AmountSectionView.itemsLabelFont")) as String
+        amountSectionView.itemsLabelColor = (ThemeManager.getValue("AmountSectionView.itemsLabelColor")) as String
+        amountSectionView.itemsNumberButtonBackgroundColor = (ThemeManager.getValue("AmountSectionView.itemsNumberButtonBackgroundColor")) as String
+        amountSectionView.itemsNumberButtonBorder?.color = (ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder.color")) as String
+        amountSectionView.itemsNumberButtonBorder?.width = (ThemeManager.getValue("AmountSectionView.itemsNumberButtonBorder.width") as String).toInt()
+        amountSectionView.backgroundColor = (ThemeManager.getValue("AmountSectionView.backgroundColor") as String).toColorInt()
 
 
     }
 
     fun setObject12() {
         var horizontalList = HorizontalList()
-        horizontalList.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.backgroundColor")).toString()
-        horizontalList.itemSpacing = Color.parseColor(ThemeManager.getValue("HorizontalList.itemSpacing")).toString().toInt()
-        horizontalList.margin = Color.parseColor(ThemeManager.getValue("HorizontalList.margin")).toString().toInt()
-        horizontalList.headers?.gatewayHeader?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.backgroundColor")).toString()
-        horizontalList.headers?.gatewayHeader?.leftButton?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.leftButton.labelTextFont")).toString()
-        horizontalList.headers?.gatewayHeader?.leftButton?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.leftButton.labelTextColor")).toString()
-        horizontalList.headers?.gatewayHeader?.rightButton?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextFont")).toString()
-        horizontalList.headers?.gatewayHeader?.rightButton?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextColor")).toString()
-        horizontalList.chips?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextColor")).toString().toInt()
+        horizontalList.backgroundColor = (ThemeManager.getValue("HorizontalList.backgroundColor"))as String
+        horizontalList.itemSpacing = (ThemeManager.getValue("HorizontalList.itemSpacing") as String).toInt()
+        horizontalList.margin =(ThemeManager.getValue("HorizontalList.margin")as String).toInt()
+        horizontalList.headers?.gatewayHeader?.backgroundColor = (ThemeManager.getValue("HorizontalList.gatewayHeader.backgroundColor")) as String
+        horizontalList.headers?.gatewayHeader?.leftButton?.labelTextFont = (ThemeManager.getValue("HorizontalList.gatewayHeader.leftButton.labelTextFont")) as String
+        horizontalList.headers?.gatewayHeader?.leftButton?.labelTextColor = (ThemeManager.getValue("HorizontalList.gatewayHeader.leftButton.labelTextColor")) as String
+        horizontalList.headers?.gatewayHeader?.rightButton?.labelTextFont = (ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextFont")) as String
+        horizontalList.headers?.gatewayHeader?.rightButton?.labelTextColor = (ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextColor")) as String
+        horizontalList.chips?.radius = (ThemeManager.getValue("HorizontalList.gatewayHeader.rightButton.labelTextColor")as String).toInt()
 
-        horizontalList.chips?.currencyChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.backgroundColor")).toString()
-        horizontalList.chips?.currencyChip?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.labelTextFont")).toString()
-        horizontalList.chips?.currencyChip?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.labelTextColor")).toString()
-        horizontalList.chips?.currencyChip?.selected?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.color")).toString()
-        horizontalList.chips?.currencyChip?.selected?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.radius")).toString().toInt()
-        horizontalList.chips?.currencyChip?.selected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.offsetWidth")).toString().toInt()
-        horizontalList.chips?.currencyChip?.selected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.offsetHeight")).toString().toInt()
-        horizontalList.chips?.currencyChip?.selected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.opacity")).toString().toInt()
-        horizontalList.chips?.currencyChip?.unSelected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.offsetWidth")).toString().toInt()
-        horizontalList.chips?.currencyChip?.unSelected?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.offsetHeight")).toString().toInt()
-        horizontalList.chips?.currencyChip?.unSelected?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.opacity")).toString().toInt()
+        horizontalList.chips?.currencyChip?.backgroundColor =(ThemeManager.getValue("HorizontalList.chips.currencyChip.backgroundColor"))  as String
+        horizontalList.chips?.currencyChip?.labelTextFont = (ThemeManager.getValue("HorizontalList.chips.currencyChip.labelTextFont")) as String
+        horizontalList.chips?.currencyChip?.labelTextColor =(ThemeManager.getValue("HorizontalList.chips.currencyChip.labelTextColor")) as String
+        horizontalList.chips?.currencyChip?.selected?.shadow?.color = (ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.color")) as String
+        horizontalList.chips?.currencyChip?.selected?.shadow?.radius = (ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.radius") as String).toInt()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.offsetWidth = (ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.offsetWidth") as String).toInt()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.offsetHeight = (ThemeManager.getValue("HorizontalList.chips.currencyChip.selected.shadow.offsetHeight") as String).toInt()
+        horizontalList.chips?.currencyChip?.selected?.shadow?.opacity = (ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.opacity")as String).toInt()
+        horizontalList.chips?.currencyChip?.unSelected?.shadow?.offsetWidth = (ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.offsetWidth") as String).toInt()
+        horizontalList.chips?.currencyChip?.unSelected?.shadow?.offsetHeight =(ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.offsetHeight") as String).toInt()
+        horizontalList.chips?.currencyChip?.unSelected?.shadow?.opacity = (ThemeManager.getValue("HorizontalList.chips.currencyChip.unSelected.shadow.opacity") as String).toInt()
 
-        horizontalList.chips?.gatewayChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.backgroundColor")).toString()
-        horizontalList.chips?.gatewayChip?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.color")).toString()
-        horizontalList.chips?.gatewayChip?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.radius")).toString().toInt()
-        horizontalList.chips?.gatewayChip?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.offsetWidth")).toString().toInt()
-        horizontalList.chips?.gatewayChip?.shadow?.offsetHeight = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.offsetHeight")).toString().toInt()
-        horizontalList.chips?.gatewayChip?.shadow?.opacity = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.opacity")).toString().toInt()
+        horizontalList.chips?.gatewayChip?.backgroundColor = (ThemeManager.getValue("HorizontalList.chips.gatewayChip.backgroundColor")) as String
+        horizontalList.chips?.gatewayChip?.shadow?.color = (ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.color")) as String
+        horizontalList.chips?.gatewayChip?.shadow?.radius = (ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.radius")as String).toInt()
+        horizontalList.chips?.gatewayChip?.shadow?.offsetWidth = (ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.offsetWidth")as String).toInt()
+        horizontalList.chips?.gatewayChip?.shadow?.offsetHeight = (ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.offsetHeight")as String).toInt()
+        horizontalList.chips?.gatewayChip?.shadow?.opacity = (ThemeManager.getValue("HorizontalList.chips.gatewayChip.shadow.opacity")as String).toInt()
 
-        horizontalList.chips?.goPayChip?.backgroundColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.backgroundColor")).toString()
-        horizontalList.chips?.goPayChip?.labelTextFont = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.labelTextFont")).toString()
-        horizontalList.chips?.goPayChip?.labelTextColor = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.labelTextColor")).toString()
+        horizontalList.chips?.goPayChip?.backgroundColor =(ThemeManager.getValue("HorizontalList.chips.goPayChip.backgroundColor"))as String
+        horizontalList.chips?.goPayChip?.labelTextFont = (ThemeManager.getValue("HorizontalList.chips.goPayChip.labelTextFont")) as String
+        horizontalList.chips?.goPayChip?.labelTextColor = (ThemeManager.getValue("HorizontalList.chips.goPayChip.labelTextColor"))as String
         horizontalList.chips?.goPayChip?.selected?.shadow?.color = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.shadow")).toString()
         horizontalList.chips?.goPayChip?.selected?.shadow?.radius = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.radius")).toString().toInt()
         horizontalList.chips?.goPayChip?.selected?.shadow?.offsetWidth = Color.parseColor(ThemeManager.getValue("HorizontalList.chips.goPayChip.selected.offsetWidth")).toString().toInt()
@@ -462,87 +459,87 @@ object JsonParser {
 
     fun setObject15(){
         var  hints = Hints()
-        hints.Warning?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Warning.textFont")).toString()
-        hints.Warning?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.textColor")).toString()
-        hints.Warning?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.backgroundColor")).toString()
-        hints.Warning?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.borderColor")).toString()
-        hints.Warning?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Warning.actionButtonTextColor")).toString()
-        hints.Warning?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Warning.actionButtonTextFont")).toString()
+        hints.Warning?.textFont =(ThemeManager.getValue("Hints.Warning.textFont"))as String
+        hints.Warning?.textColor =(ThemeManager.getValue("Hints.Warning.textColor"))as String
+        hints.Warning?.backgroundColor = (ThemeManager.getValue("Hints.Warning.backgroundColor"))as String
+        hints.Warning?.borderColor = (ThemeManager.getValue("Hints.Warning.borderColor"))as String
+        hints.Warning?.actionButtonTextColor = (ThemeManager.getValue("Hints.Warning.actionButtonTextColor"))as String
+        hints.Warning?.actionButtonTextFont = (ThemeManager.getValue("Hints.Warning.actionButtonTextFont"))as String
 
 
-        hints.Error?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Error.textFont")).toString()
-        hints.Error?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Error.textColor")).toString()
-        hints.Error?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Error.backgroundColor")).toString()
-        hints.Error?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Error.borderColor")).toString()
-        hints.Error?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Error.actionButtonTextColor")).toString()
-        hints.Error?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Error.actionButtonTextFont")).toString()
+        hints.Error?.textFont = (ThemeManager.getValue("Hints.Error.textFont"))as String
+        hints.Error?.textColor =(ThemeManager.getValue("Hints.Error.textColor")) as String
+        hints.Error?.backgroundColor = (ThemeManager.getValue("Hints.Error.backgroundColor")) as String
+        hints.Error?.borderColor = (ThemeManager.getValue("Hints.Error.borderColor"))as String
+        hints.Error?.actionButtonTextColor = (ThemeManager.getValue("Hints.Error.actionButtonTextColor"))as String
+        hints.Error?.actionButtonTextFont = (ThemeManager.getValue("Hints.Error.actionButtonTextFont"))as String
 
 
-        hints.Default?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Default.textFont")).toString()
-        hints.Default?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Default.textColor")).toString()
-        hints.Default?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Default.backgroundColor")).toString()
-        hints.Default?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Default.borderColor")).toString()
-        hints.Default?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Default.actionButtonTextColor")).toString()
-        hints.Default?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Default.actionButtonTextFont")).toString()
+        hints.Default?.textFont =(ThemeManager.getValue("Hints.Default.textFont"))as String
+        hints.Default?.textColor =(ThemeManager.getValue("Hints.Default.textColor"))as String
+        hints.Default?.backgroundColor = (ThemeManager.getValue("Hints.Default.backgroundColor"))as String
+        hints.Default?.borderColor = (ThemeManager.getValue("Hints.Default.borderColor"))as String
+        hints.Default?.actionButtonTextColor =(ThemeManager.getValue("Hints.Default.actionButtonTextColor")) as String
+        hints.Default?.actionButtonTextFont = (ThemeManager.getValue("Hints.Default.actionButtonTextFont")) as String
 
 
-        hints.Scanned?.textFont = Color.parseColor(ThemeManager.getValue("Hints.Scanned.textFont")).toString()
-        hints.Scanned?.textColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.textColor")).toString()
-        hints.Scanned?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.backgroundColor")).toString()
-        hints.Scanned?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.borderColor")).toString()
-        hints.Scanned?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.Scanned.actionButtonTextColor")).toString()
-        hints.Scanned?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.Scanned.actionButtonTextFont")).toString()
+        hints.Scanned?.textFont =(ThemeManager.getValue("Hints.Scanned.textFont")) as String
+        hints.Scanned?.textColor = (ThemeManager.getValue("Hints.Scanned.textColor"))as String
+        hints.Scanned?.backgroundColor = (ThemeManager.getValue("Hints.Scanned.backgroundColor"))as String
+        hints.Scanned?.borderColor = (ThemeManager.getValue("Hints.Scanned.borderColor"))as String
+        hints.Scanned?.actionButtonTextColor = (ThemeManager.getValue("Hints.Scanned.actionButtonTextColor"))as String
+        hints.Scanned?.actionButtonTextFont = (ThemeManager.getValue("Hints.Scanned.actionButtonTextFont"))as String
 
 
-        hints.GoPayLogin?.textFont = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.textFont")).toString()
-        hints.GoPayLogin?.textColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.textColor")).toString()
-        hints.GoPayLogin?.backgroundColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.backgroundColor")).toString()
-        hints.GoPayLogin?.borderColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.borderColor")).toString()
-        hints.GoPayLogin?.actionButtonTextColor = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.actionButtonTextColor")).toString()
-        hints.GoPayLogin?.actionButtonTextFont = Color.parseColor(ThemeManager.getValue("Hints.GoPayLogin.actionButtonTextFont")).toString()
+        hints.GoPayLogin?.textFont = (ThemeManager.getValue("Hints.GoPayLogin.textFont"))as String
+        hints.GoPayLogin?.textColor =(ThemeManager.getValue("Hints.GoPayLogin.textColor"))as String
+        hints.GoPayLogin?.backgroundColor = (ThemeManager.getValue("Hints.GoPayLogin.backgroundColor"))as String
+        hints.GoPayLogin?.borderColor =(ThemeManager.getValue("Hints.GoPayLogin.borderColor"))as String
+        hints.GoPayLogin?.actionButtonTextColor =(ThemeManager.getValue("Hints.GoPayLogin.actionButtonTextColor"))as String
+        hints.GoPayLogin?.actionButtonTextFont = (ThemeManager.getValue("Hints.GoPayLogin.actionButtonTextFont"))as String
 
 
     }
 
     fun setObject16(){
         var goPay = goPay()
-        goPay.loginBar?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.backgroundColor")).toString()
-        goPay.loginBar?.underline?.selected?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.underline.selected.backgroundColor")).toString()
-        goPay.loginBar?.underline?.unselected?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.underline.unselected.backgroundColor")).toString()
-        goPay.loginBar?.title?.selected?.textColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.selected.textColor")).toString()
-        goPay.loginBar?.title?.selected?.textFont = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.selected.textFont")).toString()
-        goPay.loginBar?.title?.otherSegmentSelected?.textColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.otherSegmentSelected.textColor")).toString()
-        goPay.loginBar?.title?.otherSegmentSelected?.textFont = Color.parseColor(ThemeManager.getValue("goPay.loginBar.title.otherSegmentSelected.textFont")).toString()
-        goPay.loginBar?.hintLabel?.textFont = Color.parseColor(ThemeManager.getValue("goPay.loginBar.hintLabel.textFont")).toString()
-        goPay.loginBar?.hintLabel?.textColor = Color.parseColor(ThemeManager.getValue("goPay.loginBar.hintLabel.textColor")).toString()
+        goPay.loginBar?.backgroundColor = (ThemeManager.getValue("goPay.loginBar.backgroundColor"))as String
+        goPay.loginBar?.underline?.selected?.backgroundColor = (ThemeManager.getValue("goPay.loginBar.underline.selected.backgroundColor"))as String
+        goPay.loginBar?.underline?.unselected?.backgroundColor = (ThemeManager.getValue("goPay.loginBar.underline.unselected.backgroundColor"))as String
+        goPay.loginBar?.title?.selected?.textColor =(ThemeManager.getValue("goPay.loginBar.title.selected.textColor"))as String
+        goPay.loginBar?.title?.selected?.textFont = (ThemeManager.getValue("goPay.loginBar.title.selected.textFont"))as String
+        goPay.loginBar?.title?.otherSegmentSelected?.textColor = (ThemeManager.getValue("goPay.loginBar.title.otherSegmentSelected.textColor"))as String
+        goPay.loginBar?.title?.otherSegmentSelected?.textFont = (ThemeManager.getValue("goPay.loginBar.title.otherSegmentSelected.textFont")) as String
+        goPay.loginBar?.hintLabel?.textFont = (ThemeManager.getValue("goPay.loginBar.hintLabel.textFont"))as String
+        goPay.loginBar?.hintLabel?.textColor = (ThemeManager.getValue("goPay.loginBar.hintLabel.textColor"))as String
 
-        goPay.passwordView?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordView.backgroundColor")).toString()
+        goPay.passwordView?.backgroundColor = (ThemeManager.getValue("goPay.passwordView.backgroundColor"))as String
 
-        goPay.passwordField?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.backgroundColor")).toString()
-        goPay.passwordField?.textFont = Color.parseColor(ThemeManager.getValue("goPay.passwordField.textFont")).toString()
-        goPay.passwordField?.textColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.textColor")).toString()
-        goPay.passwordField?.placeHolderColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.placeHolderColor")).toString()
-        goPay.passwordField?.showPasswordIcon = Color.parseColor(ThemeManager.getValue("goPay.passwordField.showPasswordIcon")).toString()
-        goPay.passwordField?.hidePasswordIcon = Color.parseColor(ThemeManager.getValue("goPay.passwordField.hidePasswordIcon")).toString()
-        goPay.passwordField?.underline?.empty?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.underline.empty.backgroundColor")).toString()
-        goPay.passwordField?.underline?.filled?.backgroundColor = Color.parseColor(ThemeManager.getValue("goPay.passwordField.underline.filled.backgroundColor")).toString()
+        goPay.passwordField?.backgroundColor = (ThemeManager.getValue("goPay.passwordField.backgroundColor"))as String
+        goPay.passwordField?.textFont = (ThemeManager.getValue("goPay.passwordField.textFont"))as String
+        goPay.passwordField?.textColor = (ThemeManager.getValue("goPay.passwordField.textColor"))as String
+        goPay.passwordField?.placeHolderColor = (ThemeManager.getValue("goPay.passwordField.placeHolderColor"))as String
+        goPay.passwordField?.showPasswordIcon = (ThemeManager.getValue("goPay.passwordField.showPasswordIcon"))as String
+        goPay.passwordField?.hidePasswordIcon = (ThemeManager.getValue("goPay.passwordField.hidePasswordIcon"))as String
+        goPay.passwordField?.underline?.empty?.backgroundColor = (ThemeManager.getValue("goPay.passwordField.underline.empty.backgroundColor"))as String
+        goPay.passwordField?.underline?.filled?.backgroundColor = (ThemeManager.getValue("goPay.passwordField.underline.filled.backgroundColor"))as String
     }
 
     fun setObject17(){
          var actionButton = ActionButton()
-        actionButton.Common?.titleLabelFont = Color.parseColor(ThemeManager.getValue("ActionButton.Common.titleLabelFont")).toString()
-        actionButton.Common?.titleLabelColor = Color.parseColor(ThemeManager.getValue("ActionButton.Common.titleLabelColor")).toString()
-        actionButton.Common?.assets?.error = Color.parseColor(ThemeManager.getValue("ActionButton.Common.assets.error")).toString()
-        actionButton.Common?.assets?.loading = Color.parseColor(ThemeManager.getValue("ActionButton.Common.assets.loading")).toString()
-        actionButton.Common?.assets?.success = Color.parseColor(ThemeManager.getValue("ActionButton.Common.assets.success")).toString()
+        actionButton.Common?.titleLabelFont = (ThemeManager.getValue("ActionButton.Common.titleLabelFont"))as String
+        actionButton.Common?.titleLabelColor = (ThemeManager.getValue("ActionButton.Common.titleLabelColor"))as String
+        actionButton.Common?.assets?.error = (ThemeManager.getValue("ActionButton.Common.assets.error"))as String
+        actionButton.Common?.assets?.loading = (ThemeManager.getValue("ActionButton.Common.assets.loading"))as String
+        actionButton.Common?.assets?.success = (ThemeManager.getValue("ActionButton.Common.assets.success"))as String
 
 
-        actionButton.Invalid?.backgroundColor = Color.parseColor(ThemeManager.getValue("ActionButton.Invalid.backgroundColor")).toString()
+        actionButton.Invalid?.backgroundColor = (ThemeManager.getValue("ActionButton.Invalid.backgroundColor")) as String
 
-        actionButton.Valid?.goLoginBackgroundColor = Color.parseColor(ThemeManager.getValue("ActionButton.Valid.goLoginBackgroundColor")).toString()
-        actionButton.Valid?.paymentBackgroundColor = Color.parseColor(ThemeManager.getValue("ActionButton.Valid.paymentBackgroundColor")).toString()
+        actionButton.Valid?.goLoginBackgroundColor = (ThemeManager.getValue("ActionButton.Valid.goLoginBackgroundColor"))as String
+        actionButton.Valid?.paymentBackgroundColor = (ThemeManager.getValue("ActionButton.Valid.paymentBackgroundColor"))as String
 
-        actionButton.BackgroundColor?.Otp = Color.parseColor(ThemeManager.getValue("ActionButton.BackgroundColor.Otp")).toString()
-        actionButton.BackgroundColor?.default = Color.parseColor(ThemeManager.getValue("ActionButton.BackgroundColor.default")).toString()
+        actionButton.BackgroundColor?.Otp = (ThemeManager.getValue("ActionButton.BackgroundColor.Otp"))as String
+        actionButton.BackgroundColor?.default = (ThemeManager.getValue("ActionButton.BackgroundColor.default"))as String
     }
 }
