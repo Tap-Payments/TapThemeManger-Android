@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/tools">
+<layout >
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:custom ="http://schemas.android.com/apk/res-auto"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <company.tap.tapuilibrary.TapTextView
+        <company.tap.tapuilibrary.atoms.TapTextView
+            android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:gravity="center"
-            app:textViewTheme="@{textViewTheme}"/>
+            android:gravity="center" />
 
     </LinearLayout>
 
@@ -21,11 +21,11 @@
 <!--            name="textViewTheme"-->
 <!--            type="company.tap.thememanager.theme.TextViewTheme" />-->
 <!--    </data>-->
-    <data>
-        <variable
-            name="textViewTheme"
-            type="company.tap.thememanager.models.inlinecard.TextFields" />
-    </data>
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="textViewTheme"-->
+<!--            type="company.tap.thememanager.models.inlinecard.TextFields" />-->
+<!--    </data>-->
 
 
 </layout>

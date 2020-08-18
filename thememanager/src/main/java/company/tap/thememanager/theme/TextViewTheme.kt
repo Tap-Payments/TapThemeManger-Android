@@ -5,5 +5,7 @@ package company.tap.thememanager.theme
  * Copyright © 2020 Tap Payments. All rights reserved.
  */
 open class TextViewTheme : BaseTextTheme(){
-
+    var errorTextColor : String? = null
+    var font : String? = null
+    var placeHolderColor : String? = null
 }

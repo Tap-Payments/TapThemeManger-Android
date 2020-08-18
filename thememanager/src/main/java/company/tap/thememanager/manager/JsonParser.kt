@@ -238,7 +238,7 @@ object JsonParser {
 
         val recentCards = RecentCards()
 
-        recentCards.backGroundColor = (ThemeManager.getValue("recentCards.backGroundColor")as String)as String
+        recentCards.backGroundColor = (ThemeManager.getValue("recentCards.backGroundColor")as String)
         recentCards.collectionView?.spaceBetweenCells = (ThemeManager.getValue("recentCards.collectionView.spaceBetweenCells") as String).toInt()
         recentCards.collectionView?.backgroundColor = (ThemeManager.getValue("recentCards.collectionView.backgroundColor"))as String
         recentCards.collectionView?.height =(ThemeManager.getValue("recentCards.collectionView.height") as String).toInt()
