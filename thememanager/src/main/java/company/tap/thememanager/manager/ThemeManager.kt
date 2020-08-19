@@ -22,6 +22,7 @@ import java.nio.charset.StandardCharsets
 object ThemeManager {
 
     private lateinit var theme: JSONObject
+    private lateinit var themeString :String
 
 
     //// decide if we load json from path or assets
@@ -36,6 +37,7 @@ object ThemeManager {
             line = reader.readLine()
         }
         try {
+            themeString = writer.toString()
             theme = JSONObject(writer.toString())
         } catch ( e : JSONException) {
             Log.e("APP", "unexpected JSON exception", e);
@@ -57,7 +59,58 @@ object ThemeManager {
                 }
     }
 
-    fun <T> getValue(path: String): T {
+
+    fun  <T>  getValue(path: String): T  {
+        var result: T
+        try
+        {
+            result = valueFromJson(path)
+            if (isInteger(result.toString())){
+                return result
+            }else{
+                if(result.toString().contains("#")){ return result as T
+                }
+                else {
+                    if (result.toString() in (themeString.split("}")[0])) {
+                        return  valueFromJson("GlobalValues.Colors.${result}") as T
+                    }
+                    return result
+                }
+            }
+        }catch ( e : JSONException) {
+            Log.e("APP", "unexpected JSON exception", e);
+            // Do something to recover ... or kill the app.
+        }
+        return valueFromJson(path)
+    }
+
+
+    private fun isInteger(str: String?): Boolean {
+        if (str == null) {
+            return false
+        }
+        val length = str.length
+        if (length == 0) {
+            return false
+        }
+        var i = 0
+        if (str[0] == '-') {
+            if (length == 1) {
+                return false
+            }
+            i = 1
+        }
+        while (i < length) {
+            val c = str[i]
+            if (c < '0' || c > '9') {
+                return false
+            }
+            i++
+        }
+        return true
+    }
+
+    private fun <T> valueFromJson(path: String): T {
         val pathComponent = path.split('.')
         var view = theme.getJSONObject(pathComponent[0])
         if (pathComponent.size > 2) {
@@ -66,9 +119,11 @@ object ThemeManager {
             }
         }
         val valueKey = pathComponent[pathComponent.lastIndex]
-//        baseTheme = view.get(valueKey) as String
         return view.get(valueKey) as T
     }
+
+
+
 
 
 
