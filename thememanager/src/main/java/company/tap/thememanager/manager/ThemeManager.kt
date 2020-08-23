@@ -12,12 +12,7 @@ import java.io.InputStreamReader
 import java.io.StringWriter
 import java.nio.charset.StandardCharsets
 
-/**
- *
- * Created by Mario Gamal on 4/26/20
- * Copyright © 2020 Tap Payments. All rights reserved.
- *
- */
+
 @Suppress("UNCHECKED_CAST")
 object ThemeManager {
 
