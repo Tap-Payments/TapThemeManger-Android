@@ -85,6 +85,21 @@ object ThemeManager {
     }
 
 
+    fun getFontName(path: String): String{
+        // get font value and split with comma and return string and float
+        var fontName :String
+       var fontValue = getValue(path) as String
+        fontName = fontValue.split(",")[0].toString()
+        return fontName
+    }
+    fun getFontSize(path: String): Double{
+        var fontSize :Double
+       var fontValue = getValue(path) as String
+        fontSize = fontValue.split(",")[1].toDouble()
+        return fontSize
+    }
+
+
     private fun isInteger(str: String?): Boolean {
         if (str == null) {
             return false

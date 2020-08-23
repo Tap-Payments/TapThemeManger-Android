@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
         var stringValue2 =  ThemeManager.getValue("inlineCard.commonAttributes.backgroundColor") as String
         var stringValue3 =  ThemeManager.getValue("inlineCard.commonAttributes.cvvPlaceHolder") as String
         var stringValue4 =  ThemeManager.getValue("GlobalValues.Colors.white78") as String
-        Toast.makeText(applicationContext, stringValue1.toString() +stringValue2.toString() +stringValue3.toString()  +stringValue4 , Toast.LENGTH_SHORT).show()
+        var stringValue5 =  ThemeManager.getFontName("inlineCard.textFields.font")
+        var stringValue6 =  ThemeManager.getFontSize("inlineCard.textFields.font")
+        Toast.makeText(applicationContext, stringValue1.toString() +stringValue2.toString() + stringValue3.toString()  +stringValue4 +stringValue5 +stringValue6.toString() , Toast.LENGTH_SHORT).show()
 
 
 
