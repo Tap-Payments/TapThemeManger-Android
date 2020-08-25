@@ -8,7 +8,7 @@ All rights reserved.
  **/
 open class TabSelectTheme : BaseTextTheme() {
     var backgroundColor: Int? = null
-    var selectedBackgroundColor:Unit?= null
-    var unselectedBackgroundColor:Unit?= null
+    var selectedBackgroundColor:Int?= null
+    var unselectedBackgroundColor:Int?= null
 }
 
