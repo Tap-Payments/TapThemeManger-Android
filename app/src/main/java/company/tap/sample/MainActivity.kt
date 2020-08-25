@@ -2,37 +2,43 @@ package company.tap.sample
 
 import android.graphics.Color
 import android.os.Bundle
+import android.provider.CalendarContract
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import company.tap.sample.databinding.ActivityMainBinding
-import company.tap.thememanager.manager.JsonParser
 import company.tap.thememanager.manager.ThemeManager
-import company.tap.thememanager.theme.ChipTheme
 import company.tap.thememanager.theme.TextViewTheme
 import kotlinx.android.synthetic.main.navigation_header_layout.*
 
 class MainActivity : AppCompatActivity() {
 
     private var currentTheme = 0
-    private lateinit var mainBinding: ActivityMainBinding
+//    private lateinit var mainBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        initAppTheme(R.raw.default_light_theme)
+        setContentView( R.layout.activity_main)
+        initAppTheme(R.raw.defaultdarktheme)
     }
 
     private fun initAppTheme(theme: Int) {
         currentTheme = theme
 //        ThemeManager.loadTapTheme(this, "https://kar-tempo.s3.ap-south-1.amazonaws.com/theme-tap.json")
         ThemeManager.loadTapTheme(resources, theme)
-        val textViewTheme = TextViewTheme()
-        textViewTheme.textSize = (ThemeManager.getValue<Int>("inlineCard.saveCardOption.labelTextFont") as String ).toFloat()
-        textViewTheme.textColor = Color.parseColor(ThemeManager.getValue("GlobalValues.Colors.orange"))
-        mainBinding.textViewTheme = textViewTheme
+//        val textViewTheme = TextViewTheme()
+        var stringValue1 =  ThemeManager.getValue("inlineCard.commonAttributes.cornerRadius") as Int
+        var stringValue2 =  ThemeManager.getValue("inlineCard.commonAttributes.backgroundColor") as String
+        var stringValue3 =  ThemeManager.getValue("inlineCard.commonAttributes.cvvPlaceHolder") as String
+        var stringValue4 =  ThemeManager.getValue("GlobalValues.Colors.white78") as String
+        var stringValue5 =  ThemeManager.getFontName("inlineCard.textFields.font")
+        var stringValue6 =  ThemeManager.getFontSize("inlineCard.textFields.font")
+        Toast.makeText(applicationContext, stringValue1.toString() +stringValue2.toString() + stringValue3.toString()  +stringValue4 +stringValue5 +stringValue6.toString() , Toast.LENGTH_SHORT).show()
 
-//        mainBinding.textViewTheme = JsonParser.setObject1InlineCard()
+
+
+        //  textView.setTheme(textViewTheme)
+//        = (ThemeManager.getValue<Int>("inlineCard.saveCardOption.labelTextFont") as String ).toFloat()
+//        textView.setTheme(textViewTheme) = Color.parseColor(ThemeManager.getValue("GlobalValues.Colors.orange"))
     }
 
 
@@ -40,9 +46,16 @@ class MainActivity : AppCompatActivity() {
 
 
     fun swap(view: View?) {
-        if (currentTheme == R.raw.default_light_theme)
-            initAppTheme(R.raw.default_dark_theme)
-        else
-            initAppTheme(R.raw.default_light_theme)
+        initAppTheme(R.raw.defaultdarktheme)
+
+//        if (currentTheme == R.raw.defaultdarktheme) {
+//            initAppTheme(R.raw.defaultlighttheme)
+//            Toast.makeText(applicationContext, "Theme switched to defaultlighttheme", Toast.LENGTH_SHORT).show()
+//        }
+//        else {
+//            initAppTheme(R.raw.defaultdarktheme)
+//            Toast.makeText(applicationContext, "Theme switched defaultdarktheme", Toast.LENGTH_SHORT).show()
+//
+//        }
     }
 }

@@ -65,7 +65,7 @@ object JsonParser {
     }
 
 
-  fun setObjectGlobalValues(){
+  fun setObjectGlobalValues():Colors{
       var  colors = Colors()
       colors.apricot30 = (ThemeManager.getValue("GlobalValues.Colors.apricot30")as String).toColorInt()
       colors.black = (ThemeManager.getValue("GlobalValues.Colors.black")as String).toColorInt()
@@ -99,6 +99,7 @@ object JsonParser {
       colors.brownGreySeven = (ThemeManager.getValue("GlobalValues.Colors.brownGreySeven")as String).toColorInt()
       colors.white78 = (ThemeManager.getValue("GlobalValues.Colors.white78")as String).toColorInt()
       colors.brownGreyFour = (ThemeManager.getValue("GlobalValues.Colors.brownGreyFour")as String).toColorInt()
+  return colors
   }
 
 
@@ -130,7 +131,7 @@ object JsonParser {
         inlineCard.clearImage?.width = (ThemeManager.getValue("inlineCard.clearImage.width")as String).toColorInt()
 
 
-        inlineCard.textFields?.textColor = (ThemeManager.getValue("inlineCard.textFields.textColor")as String).toString()
+        inlineCard.textFields?.textColor = (ThemeManager.getValue("inlineCard.textFields.textColor")as String).toColorInt()
         inlineCard.textFields?.errorTextColor = (ThemeManager.getValue("inlineCard.textFields.errorTextColor")as String).toString()
         inlineCard.textFields?.font = (ThemeManager.getValue("inlineCard.textFields.font")as String).toString()
         inlineCard.textFields?.placeHolderColor = (ThemeManager.getValue("inlineCard.textFields.placeHolderColor")as String).toString()
@@ -146,7 +147,7 @@ object JsonParser {
     }
 
 
-    fun setObject2PhoneCard(){
+    fun setObject2PhoneCard(): PhoneCard{
         val phoneCard = PhoneCard()
 
         phoneCard.commonAttributes?.backgroundColor = (ThemeManager.getValue("phoneCard.commonAttributes.backgroundColor")as String).toString()
@@ -174,10 +175,11 @@ object JsonParser {
         phoneCard.textFields?.font = (ThemeManager.getValue("phoneCard.textFields.font")as String).toString()
         phoneCard.textFields?.placeHolderColor = (ThemeManager.getValue("phoneCard.textFields.placeHolderColor")as String).toString()
 
+        return phoneCard
     }
 
 
-    fun setObject3EmailCard(){
+    fun setObject3EmailCard() : EmailCard{
         val emailCard = EmailCard()
 
         emailCard.commonAttributes?.backgroundColor = (ThemeManager.getValue("emailCard.commonAttributes.backgroundColor")as String).toString()
@@ -185,7 +187,7 @@ object JsonParser {
         emailCard.commonAttributes?.cornerRadius = (ThemeManager.getValue("emailCard.commonAttributes.cornerRadius")as String).toColorInt()
         emailCard.commonAttributes?.borderWidth = (ThemeManager.getValue("emailCard.commonAttributes.borderWidth")as String).toColorInt()
         emailCard.commonAttributes?.itemSpacing = (ThemeManager.getValue("emailCard.commonAttributes.itemSpacing")as String).toColorInt()
-        emailCard.commonAttributes?.shadow?.color = (ThemeManager.getValue("emailCard.commonAttributes.shadow.color")as String).toString()
+        emailCard.commonAttributes?.shadow?.color = (ThemeManager.getValue("emailCard.commonAttributes.shadow.color")as String)
         emailCard.commonAttributes?.shadow?.radius = (ThemeManager.getValue("emailCard.commonAttributes.shadow.radius")as String).toColorInt()
         emailCard.commonAttributes?.shadow?.offsetWidth = (ThemeManager.getValue("emailCard.commonAttributes.shadow.offsetWidth")as String).toColorInt()
         emailCard.commonAttributes?.shadow?.offsetHeight = (ThemeManager.getValue("emailCard.commonAttributes.shadow.offsetHeight")as String).toColorInt()
@@ -204,10 +206,12 @@ object JsonParser {
         emailCard.textFields?.errorTextColor = (ThemeManager.getValue("emailCard.textFields.errorTextColor")as String).toString()
         emailCard.textFields?.font = (ThemeManager.getValue("emailCard.textFields.font")as String).toString()
         emailCard.textFields?.placeHolderColor = (ThemeManager.getValue("emailCard.textFields.placeHolderColor")as String).toString()
+
+        return emailCard
     }
 
 
-    fun setObject4fullCard(){
+    fun setObject4fullCard() : FullCard{
         val fullCard = FullCard()
 
         fullCard.commonAttributes?.backgroundColor = (ThemeManager.getValue("fullCard.commonAttributes.backgroundColor")as String).toString()
@@ -237,15 +241,15 @@ object JsonParser {
         fullCard.saveCardOption?.switchTintColor = (ThemeManager.getValue("fullCard.saveCardOption.switchTintColor")as String).toString()
         fullCard.saveCardOption?.switchThumbColor = (ThemeManager.getValue("fullCard.saveCardOption.switchThumbColor")as String).toString()
         fullCard.saveCardOption?.switchOnThumbColor = (ThemeManager.getValue("fullCard.saveCardOption.switchOnThumbColor")as String).toString()
-
+        return fullCard
     }
 
 
-    fun setObject5RecentCards(){
+    fun setObject5RecentCards() : RecentCards{
 
         val recentCards = RecentCards()
 
-        recentCards.backGroundColor = (ThemeManager.getValue("recentCards.backGroundColor")as String)as String
+        recentCards.backGroundColor = (ThemeManager.getValue("recentCards.backGroundColor")as String)
         recentCards.collectionView?.spaceBetweenCells = (ThemeManager.getValue("recentCards.collectionView.spaceBetweenCells") as String).toInt()
         recentCards.collectionView?.backgroundColor = (ThemeManager.getValue("recentCards.collectionView.backgroundColor"))as String
         recentCards.collectionView?.height =(ThemeManager.getValue("recentCards.collectionView.height") as String).toInt()
@@ -282,32 +286,36 @@ object JsonParser {
 
         recentCards.chipUI?.contentLabel?.textColor = (ThemeManager.getValue("recentCards.chipUI.contentLabel?.textColor"))as String
         recentCards.chipUI?.contentLabel?.textFont=(ThemeManager.getValue("recentCards.chipUI.contentLabel.textFont") as String).toInt()
+        return recentCards
     }
 
 
 
-    fun setObject6TapBottomSheet(){
+    fun setObject6TapBottomSheet() : TapBottomSheet{
         var tapBottomSheet = TapBottomSheet()
         tapBottomSheet.dimmedColor = (ThemeManager.getValue("tapBottomSheet.dimmedColor"))as String
+        return tapBottomSheet
     }
 
 
-    fun setObject7TapSeparationLine(){
+    fun setObject7TapSeparationLine(): TapSeparatorLine{
         var tapSeparationLine = TapSeparatorLine()
         tapSeparationLine.backgroundColor = (ThemeManager.getValue("tapSeparationLine.backgroundColor"))as String
         tapSeparationLine.height =(ThemeManager.getValue("tapSeparationLine.height ") as String).toInt()
         tapSeparationLine.initialTrailingConstraint =(ThemeManager.getValue("tapSeparationLine.initialTrailingConstraint ") as String).toInt()
 
+        return tapSeparationLine
     }
 
 
-    fun setObject8TapDragHandler(){
+    fun setObject8TapDragHandler() : TapDragHandler{
         var tapDragHandler = TapDragHandler()
         tapDragHandler.image = (ThemeManager.getValue("tapDragHandler.image"))as String
         tapDragHandler.backgroundColor = (ThemeManager.getValue("tapDragHandler.backgroundColor"))as String
         tapDragHandler.width =(ThemeManager.getValue("tapDragHandler.width ") as String).toInt()
         tapDragHandler.height =(ThemeManager.getValue("tapDragHandler.height ") as String).toInt()
         tapDragHandler.corner =(ThemeManager.getValue("tapDragHandler.corner ") as String).toInt()
+        return tapDragHandler
     }
 
 
