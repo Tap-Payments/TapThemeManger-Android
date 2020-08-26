@@ -11,5 +11,12 @@ open class EditTextTheme : BaseTextTheme() {
     var maxLines: Int? = null
     var textColorHint: Int? = null
     var backgroundTint: Int? = null
+    var  backgroundColor:Int?=null
+    var placeHolderColor :Int?=null
+    var showPasswordIcon :String?=null
+    var hidePasswordIcon :String?=null
+    var underlineSelectfillBackground :Int?=null
+    var underlineSelectemptyBackground :Int?=null
+
 
 }

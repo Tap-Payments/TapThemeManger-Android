@@ -6,4 +6,6 @@ package company.tap.thememanager.theme
  * Copyright © 2020 Tap Payments. All rights reserved.
  *
  */
-open class TextInputTheme : BaseTextTheme()
+open class TextInputTheme : BaseTextTheme(){
+    var backgroundColor: Int? = null
+}

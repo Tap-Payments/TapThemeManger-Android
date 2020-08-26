@@ -8,4 +8,5 @@ open class BaseTextTheme {
     var textColor: Int? = null
     var textSize: Float? = null
     var letterSpacing: Float? = null
+
 }
