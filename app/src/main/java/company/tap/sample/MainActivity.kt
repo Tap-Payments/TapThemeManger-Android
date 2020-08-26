@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         var stringValue4 =  ThemeManager.getValue("GlobalValues.Colors.white78") as String
         var stringValue5 =  ThemeManager.getFontName("inlineCard.textFields.font")
         var stringValue6 =  ThemeManager.getFontSize("inlineCard.textFields.font")
-        Toast.makeText(applicationContext, stringValue1.toString() +stringValue2.toString() + stringValue3.toString()  +stringValue4 +stringValue5 +stringValue6.toString() , Toast.LENGTH_SHORT).show()
+        var stringValue7 = ThemeManager.getValue("amountSectionView.itemsNumberButtonCorner") as Int
 
-
+        Toast.makeText(applicationContext, stringValue1.toString() +stringValue2.toString() + stringValue3.toString()  +stringValue4 +stringValue5 +stringValue6.toString()+ stringValue7.toString() , Toast.LENGTH_SHORT).show()
 
         //  textView.setTheme(textViewTheme)
 //        = (ThemeManager.getValue<Int>("inlineCard.saveCardOption.labelTextFont") as String ).toFloat()

@@ -15,4 +15,5 @@ open class ChipTheme : BaseTextTheme() {
     var cardElevation: Int? = null
     var strokeColor: Int? = null
     var strokeWidth: Int? = null
+    var chipHeight: Int? = null
 }
