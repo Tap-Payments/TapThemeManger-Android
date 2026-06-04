@@ -23,7 +23,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-  implementation 'com.github.Tap-Payments:TapThemeManger-Android:0.0.1'
+  implementation 'com.github.Tap-Payments:TapThemeManger-Android:0.0.5'
 }
 ```
 
